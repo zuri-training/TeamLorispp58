@@ -10,13 +10,13 @@ A platform that allows schools in a certain locality list directory of people ow
 
 ## Features Requirements
 
-**Unathenticated Users**
+**Unauthenticated Users**
 - Visit the platform to view basic information about it
 - View and Interact with the documentation
 - Register to view more details
 - No access to data
 
-**Athenticated Users**
+**Authenticated Users**
 
 - Full access to the platform
 - Verify details before full access to platform
