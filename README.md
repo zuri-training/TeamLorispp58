@@ -37,3 +37,9 @@ A platform that allows schools in a certain locality list directory of people ow
 **Server:** PYTHON, DJANGO
 
 
+## Documentation
+
+- [Figma Link](https://linktodocumentation) 
+- [Data Schema](https://linktodocumentation)
+
+
