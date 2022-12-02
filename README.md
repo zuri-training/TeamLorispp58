@@ -1,2 +1,0 @@
-# TeamLorispp
-My Debtors
