@@ -42,4 +42,22 @@ A platform that allows schools in a certain locality list directory of people ow
 - [Figma Link](https://linktodocumentation) 
 - [Data Schema](https://linktodocumentation)
 
+## Project Team Members
+
+- [@Niqabigeek](https://www.github.com/niqabigeek)
+- [@Anitanwosu](https://www.github.com/anitanwosu)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+- [@Add Name](https://www.github.com/octokatherine)
+
+
+
 
