@@ -32,10 +32,21 @@ A platform that allows schools in a certain locality list directory of people ow
 
 **Design:** FIGMA
 
-**Client:** HTML, CSS, JAVASCRIPT
+**Client:** 
+<img src="https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
+<img src="https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3in&logoColor=white" alt="CSS3 Badge"/>
+<img src="https://img.shields.io/badge/JAVASCRIPT-grey?style=for-the-badge&logo=javascript&logoColor=white" alt="Javascript Badge"/>
 
-**Server:** PYTHON, DJANGO
+**Server:** 
+<img src="https://img.shields.io/badge/PYTHON-skyblue?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge"/>
+<img src="https://img.shields.io/badge/DJANGO-darkgreen?style=for-the-badge&logo=django&logoColor=white" alt="Django Badge"/>
 
+**Database:**
+<img src="https://img.shields.io/badge/MYSQL-blue?style=for-the-badge&logo=mysql&logoColor=white" alt="Mysql Badge"/>
+
+**Project Management and Version Control:**
+
+<img src="https://img.shields.io/badge/GITHUB-dimgrey?style=for-the-badge&logo=github&logoColor=white" alt="github Badge"/>
 
 ## Documentation
 
@@ -48,7 +59,7 @@ A platform that allows schools in a certain locality list directory of people ow
 - [@Anitanwosu](https://www.github.com/anitanwosu)
 - [@victoryidahor2020](https://www.github.com/victoryidahor2020)
 - [@Santibenson](https://www.github.com/Santibenson)
-- [@Add Name](https://www.github.com/octokatherine)
+- [@cutespot3200](https://www.github.com/cutespot3200)
 - [@Add Name](https://www.github.com/octokatherine)
 - [@Add Name](https://www.github.com/octokatherine)
 - [@Add Name](https://www.github.com/octokatherine)
