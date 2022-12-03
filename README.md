@@ -52,7 +52,7 @@ A platform that allows schools in a certain locality list directory of people ow
 ## Documentation
 
 - [Figma Link](https://linktodocumentation) 
-- [Data Schema](https://linktodocumentation)
+- [Data Schema](https://docs.google.com/document/d/1jrnUNzCB5b0qH2yzSGrk7mR_qb9eqgFwDNTodXJRlOc/edit?usp=sharing)
 
 ## Project Team Members
 
