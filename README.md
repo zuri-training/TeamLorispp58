@@ -31,10 +31,10 @@ A platform that allows schools in a certain locality list directory of people ow
 ## Tech Stack
 
 **Design:** 
- Figma
+ <img src="https://img.shields.io/badge/FIGMA-orange?style=for-the-badge&logo=figma&logoColor=white" alt="FIGMA Badge"/>
 
 **Client:** 
-<img src="https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
+<img src="https://img.shields.io/badge/HTML5-darkorange?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
 <img src="https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3in&logoColor=white" alt="CSS3 Badge"/>
 <img src="https://img.shields.io/badge/JAVASCRIPT-grey?style=for-the-badge&logo=javascript&logoColor=white" alt="Javascript Badge"/>
 
@@ -47,7 +47,7 @@ A platform that allows schools in a certain locality list directory of people ow
 
 **Project Management and Version Control:**
 
-<img src="https://img.shields.io/badge/GITHUB-dimgrey?style=for-the-badge&logo=github&logoColor=white" alt="github Badge"/>
+<img src="https://img.shields.io/badge/GITHUB-black?style=for-the-badge&logo=github&logoColor=white" alt="github Badge"/>
 
 ## Documentation
 
