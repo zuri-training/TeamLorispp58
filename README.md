@@ -61,7 +61,7 @@ A platform that allows schools in a certain locality list directory of people ow
 - [@victoryidahor2020](https://www.github.com/victoryidahor2020)
 - [@Santibenson](https://www.github.com/Santibenson)
 - [@cutespot3200](https://www.github.com/cutespot3200)
-- [@Add Name](https://www.github.com/octokatherine)
+- [@TheGreatWizard16](https://www.github.com/TheGreatWizard16)
 - [@Add Name](https://www.github.com/octokatherine)
 - [@Add Name](https://www.github.com/octokatherine)
 - [@Add Name](https://www.github.com/octokatherine)
