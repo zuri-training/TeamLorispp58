@@ -63,7 +63,7 @@ A platform that allows schools in a certain locality list directory of people ow
 - [@cutespot3200](https://www.github.com/cutespot3200)
 - [@TheGreatWizard16](https://www.github.com/TheGreatWizard16)
 - [@Ibukundev](https://www.github.com/Ibukundev)
-- [@Add Name](https://www.github.com/octokatherine)
+- [@Ba-Mobolanle](https://www.github.com/Ba-Mobolanle)
 - [@Add Name](https://www.github.com/octokatherine)
 - [@Add Name](https://www.github.com/octokatherine)
 - [@Add Name](https://www.github.com/octokatherine)
