@@ -30,7 +30,8 @@ A platform that allows schools in a certain locality list directory of people ow
 
 ## Tech Stack
 
-**Design:** FIGMA
+**Design:** 
+ Figma
 
 **Client:** 
 <img src="https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"/>
