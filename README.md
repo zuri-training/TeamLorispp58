@@ -66,7 +66,7 @@ A platform that allows schools in a certain locality list directory of people ow
 - [@Ba-Mobolanle](https://www.github.com/Ba-Mobolanle)
 - [@MahdiyaOyiza](https://www.github.com/MahdiyaOyiza)
 - [@Hamsen22](https://www.github.com/octokatherine)
-- [@Add Name](https://www.github.com/octokatherine)
+- [@Jhaniee](https://www.github.com/Jhaniee)
 - [@Add Name](https://www.github.com/octokatherine)
 - [@Add Name](https://www.github.com/octokatherine)
 
