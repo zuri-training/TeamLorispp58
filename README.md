@@ -52,7 +52,7 @@ A platform that allows schools in a certain locality list directory of people ow
 ## Documentation
 
 - [Project Documentation](https://docs.google.com/document/d/1_GdAB9qmQZCOtyvn2LBKBQkuh2_1t4vgkf1nh8Ej-I8/edit?usp=sharing) 
-- [Figma Link]([https://linktodocumentation](https://www.figma.com/file/8b4Bfra3koQwecQYQg8jMv/My-Debtors-WiFi?node-id=79%3A37&t=SseGuCzteGGu7DYg-1)) 
+- [Figma Link](https://linktodocumentation](https://www.figma.com/file/8b4Bfra3koQwecQYQg8jMv/My-Debtors-WiFi?node-id=79%3A37&t=SseGuCzteGGu7DYg-1)
 - [Data Schema](https://docs.google.com/document/d/1jrnUNzCB5b0qH2yzSGrk7mR_qb9eqgFwDNTodXJRlOc/edit?usp=sharing)
 
 ## Project Team Members
