@@ -51,6 +51,7 @@ A platform that allows schools in a certain locality list directory of people ow
 
 ## Documentation
 
+- [Project Documentation](https://docs.google.com/document/d/1_GdAB9qmQZCOtyvn2LBKBQkuh2_1t4vgkf1nh8Ej-I8/edit?usp=sharing) 
 - [Figma Link](https://linktodocumentation) 
 - [Data Schema](https://docs.google.com/document/d/1jrnUNzCB5b0qH2yzSGrk7mR_qb9eqgFwDNTodXJRlOc/edit?usp=sharing)
 
