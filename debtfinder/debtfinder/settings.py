@@ -62,7 +62,7 @@ ROOT_URLCONF = 'debtfinder.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # temolates for the client
+        # templates for the client
         'DIRS': [
             BASE_DIR / 'templates',
         ],
