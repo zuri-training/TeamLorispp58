@@ -9,6 +9,9 @@ from .forms import *
 
 # Creates a custom user and a parent
 
+def createAccount(request):
+    return render(request, "account/create_account.html")
+
 def registerView(request):
     form = CustomUserForm()
     if request.method == "POST":
@@ -93,6 +96,8 @@ def logoutView(request):
         return redirect("homepage") 
 
 
+def schoolProfile(request):
+    return render(request, "account/schoolProfile.html")
 
 def schools(request):
     schoolList = School.objects.all()
@@ -106,5 +111,21 @@ def school_view(request, pk):
     schoolView = School.objects.get(id=pk)
     context = {
         "schoolView": schoolView
+    }
+    return render(request, "", context)
+
+def database(request):
+    debtors = Debtor.objects.all()
+    context = {
+        "debtors": debtors
+    }
+
+    return render(request, "", context)
+
+
+def debtorView(request, pk):
+    debtorView = Debtor.objects.get(id=pk)
+    context = {
+        "debtor": debtorView
     }
     return render(request, "", context)

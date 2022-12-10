@@ -1,0 +1,607 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+
+}
+
+/* webapp header */
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    width: 100%;
+    background-color: #210440;
+
+
+}
+
+.brand__logo {
+    margin-top: 1.5rem;
+    height: 67px;
+}
+
+#logo {
+
+    height: 41px;
+}
+
+/* navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav__links li {
+    padding-left: 3rem;
+}
+
+.nav__links a {
+    text-decoration: none;
+
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav__links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    text-underline-offset: 8px;
+
+}
+
+
+/* navigation bar ends */
+
+/* header primary btn */
+
+#header-btn-a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ffffff;
+
+}
+
+
+#header-btn-b {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 9px;
+    background-color: transparent;
+    padding: 6px 10px;
+    color: #ffffff;
+    border-radius: 9px;
+    cursor: pointer;
+    border: #ffffff solid 2px;
+
+}
+
+#header-btn-a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+#header-btn-b:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #210440;
+
+}
+
+
+
+/* hero section */
+
+.s-container {
+    background-image: url(img/Rectangle\ 130.svg);
+    background-size: 120%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 90vh;
+    background-color: #ffffff;
+
+
+}
+
+.s-content {
+
+    font-size: 33px;
+    font-weight: 400;
+    color: #0C0118;
+    /* width: 40%; */
+    padding: 2rem 3rem 0 0;
+    margin: 4%;
+
+
+}
+
+
+.s-copy {
+    line-height: 100%;
+    margin-bottom: 1rem;
+}
+
+span {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-holder {
+    margin-top: 3rem;
+}
+
+#img {
+
+    width: 650px;
+    height: 600px;
+
+
+
+
+}
+
+
+
+.sub-text {
+
+    font-size: 16px;
+    color: #5E5B5B;
+}
+
+
+.content-btn {
+    margin-top: 2rem;
+    background-color: #210440;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 9px;
+    padding: 16px 32px;
+    box-shadow: 6px 8px 3px rgb(222 214 214) !important;
+
+
+}
+
+
+.content-btn:hover {
+    background-color: #320b5c;
+    cursor: pointer;
+    box-shadow: 6px 8px 3px rgb(222 214 214) !important;
+
+}
+
+/* section2 */
+
+.body {
+    height: 50vh;
+
+
+
+
+}
+
+
+
+.brand-users {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    padding: 52px;
+
+}
+
+.client p {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-right: 4rem;
+    color: #FC0404;
+}
+
+
+.logo-container {
+    position: relative;
+
+
+}
+
+.top-left {
+    position: absolute;
+    top: 5%;
+    left: 12rem;
+}
+
+.top-right {
+    position: absolute;
+    top: 5%;
+    right: 15rem;
+
+}
+
+.center {
+    position: absolute;
+    margin-top: 2rem;
+    right: 34rem;
+    text-align: center;
+
+
+
+}
+
+.centered {
+    position: absolute;
+    margin-top: 2rem;
+    width: 70%;
+    text-align: center;
+
+
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: -10rem;
+    right: 18rem;
+
+}
+
+
+.bottom-left {
+    position: absolute;
+    bottom: -10rem;
+    left: 16rem;
+
+}
+
+.bottom-center {
+    position: absolute;
+    bottom: -10rem;
+    right: 42rem;
+
+}
+
+#client {
+    width: 60px;
+    height: 60px;
+}
+
+/* .p-content{
+    
+    height: 50vh;
+    text-align: center;
+} */
+
+.s-heading {
+
+    padding: 4rem;
+    text-align: center;
+}
+
+.s-heading h2 {
+    font-size: 24px;
+}
+
+.s-heading p {
+    font-size: 20px;
+    color: #292D32;
+    margin-top: 1rem;
+}
+
+.contentcopy {
+
+    height: 100vh;
+    background-color: #FAEAE8;
+
+}
+
+.value-container {
+    display: flex;
+    align-items: center;
+}
+
+.float-left {
+    margin: auto;
+    padding: 2rem 3rem 0 0;
+    width: 60%;
+}
+
+
+.float-left p {
+    font-size: 20px;
+}
+
+.float-left h2 {
+    margin-bottom: 1rem;
+    font-size: 24px;
+}
+
+.paragraph {
+    margin-top: 1rem;
+}
+
+#png {
+
+    height: 400px;
+    width: 500px;
+    border-radius: 18px;
+}
+
+.png-image {
+    margin-top: 3.5rem;
+    float: right;
+}
+
+.s-offer {
+    height: 100vh;
+}
+
+.offer-copy {
+    padding: 4rem;
+    text-align: center;
+}
+
+.offer-copy h2 {
+    font-size: 24px;
+}
+
+.offer-copy p {
+    font-size: 20px;
+    color: #292D32;
+    margin-top: 1rem;
+}
+
+.s-review {
+    height: 100vh;
+}
+
+.review-copy {
+    padding: 4rem;
+    text-align: center;
+}
+
+.review-copy h2 {
+    font-size: 24px;
+}
+
+.offer-copy p {
+    font-size: 20px;
+    color: #292D32;
+    margin-top: 1rem;
+}
+
+#imgg {
+    height: 400px;
+    width: 300px;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-holder p {
+    text-align: center;
+
+}
+
+.img-holder {
+    margin-right: 3rem;
+}
+
+.card {
+    background-color: #FAEAE8;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.card p {
+    font-size: 20px;
+    color: #242424;
+
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#profile-img {
+    height: 100px;
+    width: 100px;
+}
+
+.img-p {
+    font-size: 16px;
+    color: #0C0118;
+    margin-bottom: 1rem
+}
+
+.review-link {
+    float: right;
+    margin: 2rem;
+}
+
+.review-link a {
+    color: #0C0118;
+}
+
+
+/* web footer starts */
+
+
+.web-footer {
+
+    height: 70vh;
+    background-color: #210440;
+}
+
+.newsletter {
+    text-align: center;
+
+}
+
+.newsletter h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 2rem;
+
+}
+
+/* form input */
+
+input[type=text] {
+    background-color: #210440;
+    border: 1px solid #ffffff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none !important;
+    padding: 0.5rem 4rem;
+    color: #B5ABBF;
+
+
+}
+
+
+
+
+
+input[type=submit] {
+
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #B5ABBF;
+    border: 1px solid #B5ABBF;
+    padding: 0.5rem 4rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+
+}
+
+.row {
+    display: flex;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.coloum {
+    margin: 60px;
+    cursor: pointer;
+}
+
+.coloum h3 {
+    padding-bottom: 13px;
+    text-align: left;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 400;
+    color: #B5ABBF;
+    text-decoration: none;
+
+
+}
+
+.footer-link:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 8px;
+}
+
+
+.social-icons {
+    display: flex;
+
+}
+
+.social-icons .icon {
+    text-decoration: none;
+    font-size: 24px;
+    color: #B5ABBF;
+    margin: 5px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.social-icons .icon:hover {
+    color: #dbd7de;
+}
+
+/* terms and condition/privacy */
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.copyright p {
+    color: #ffffff80;
+}
+
+.copyright-link {
+
+    float: right;
+    text-decoration: none;
+    color: #B5ABBF;
+    margin-right: 2rem;
+
+}
+
+
+
+.copyright-link a {
+    text-decoration: none;
+    color: #B5ABBF;
+    text-underline-offset: 8px;
+}
+
+.copyright-link a:hover {
+    color: #dbd7de;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+
+/* web footer ends here */

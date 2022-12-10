@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from .models import *
-from account.models import Debtor
 from .forms import DiscussionForm, CommentForm
 
 # Create your views here.
@@ -69,21 +68,4 @@ def deleteDiscuss(request, pk):
         discussObj.delete()
         return redirect("disccuss")
     context = {"object": discussObj}
-    return render(request, "", context)
-
-
-def database(request):
-    debtors = Debtor.objects.all()
-    context = {
-        "debtors": debtors
-    }
-
-    return render(request, "", context)
-
-
-def debtorView(request, pk):
-    debtorView = Debtor.objects.get(id=pk)
-    context = {
-        "debtor": debtorView
-    }
     return render(request, "", context)
