@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    
+}
+
+/* web logo */
+.brand-logo{
+    text-align: center;
+    margin-top: 1.5rem;
+    height: 67px;
+}
+
+#logo{
+    
+    height: 41px;
+}
+
+
+
+
+/* sidenav begins here */
+
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #210440;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+.sidenav a{
+    /* padding: 6px 8px 6px 16px; */
+    padding:10px 8px 6px 3rem;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+}
+  
+.sidenav a:hover{
+    background-color: #F0F0F0;
+    color: #242424;
+}
+
+
+.bottom-nav{
+    margin-top: 8rem ;
+}
+  
+/* 
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} */
+
+
+
+input[type=text] {
+    background-color: #e8e6e650;
+    border-radius: 10px;
+    padding: 0.3rem 18rem;
+    font-size: 18px;
+    
+}
+  
+.search-container{
+    
+    padding: 4rem;
+    text-align: center;
+}
+
+
+
+  
+.search-container button:hover {
+    /* background: #ccc; */
+}
+  
+
+.search-container {
+      /* float: none; */
+}
+
+input[type=text],  .search-container button {
+      /* float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px; */
+}
+input[type=text] {
+      border: 1px solid #ccc;  
+}
+
+.btn{
+  
+    margin-left: 16rem ;
+}
+
+.pending{
+    padding: 0.3rem 1rem;
+    background-color: #ffffff;
+    border: 2px solid #210440;
+    color: #210440;
+    border-radius: 6px;
+}
+
+.completed{
+    padding: 0.3rem 1rem;
+    background-color: #210440;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.btn1{
+    float: right;
+   
+}
+
+.filter{
+    color: #242424;
+    background-color: #ffffff;
+    border: 2px solid #210440;
+    border-radius: 6px;
+    padding: 0.3rem 1rem;
+}
