@@ -11,7 +11,5 @@ urlpatterns = [
     path("create_discussion/", createDiscuss, name="createDiscuss"),
     path("update_discussion/", updateDiscuss, name="updateDiscuss"),
     path("delete_discussion/", deleteDiscuss, name="deleteDiscuss"),
-    # database for debtors
-    path("database/", database, name="database"),
-    path("debtor_about/<str:pk>", debtorView, name="debtorView")
+    
 ]

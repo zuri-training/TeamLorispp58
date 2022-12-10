@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'register' %}">
+    <div><h3>
+        Register as a parent
+    </h3></div>
+</a>
+<a href="{% url 'schoolRegView' %}">
+    <div><h3>
+        Register as a School owner
+    </h3></div>
+</a>
+{% endblock content %}
