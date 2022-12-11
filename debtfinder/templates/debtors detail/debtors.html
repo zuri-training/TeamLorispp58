@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debtors Details</title>
+    <link rel="stylesheet" href="debtors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+</head>
+<body>
+    <!-- header html -->
+    <header>
+        <nav class="navbar">
+
+            <div class="brand__logo">
+                <img src="LOGO.svg" id="logo" alt="brand-logo">
+            </div>
+
+            <ul class="nav__links">
+
+                <li>
+                    <a href="">Home</a>
+                </li>
+
+                <li>
+                    <a href="">About Us</a>
+                </li>
+
+                <li>
+                    <a href="">Contact Us</a>
+                </li>
+
+                <li>
+                    <a href="">FAQs</a>
+                </li>
+
+
+            </ul>
+
+        <!-- logout link -->
+            <div>
+                <a href="" id="header-btn-a">Log out
+                </a>
+                
+            </div>
+
+        </nav>
+
+    </header>
+    <!-- end of header -->
+
+<!-- main body -->
+<main>
+    <div class="main_container">
+        <h4> Debtor details</h4>
+    <div class="details">
+        <label for="student name"> Student Name</label><br>
+        <input type="text" placeholder="Adeagbo Ayomide Victor" ></input><br>
+        <label for="student id">Student Unique Identity</label><br>
+        <input type="" placeholder="555-0108/AA"></input><br>
+        <label for="email">Email Address</label><br>
+        <input type="email" placeholder="Adeagbo Ayomide Victor"></input>
+    
+    
+    </div>
+    
+    <div class="owned">
+       <h4>Debt Owned</h4>
+       <button class="ownedno">#78,500</button>
+       <h5>Discribtion</h5>
+       <p>Velit officia consequat duis velit mollit.  Exercitation veniam consequat sunt nostrud amet,duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet,duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet,duis enim velit mollit.</p>
+     </div>  
+    <div class="contend">
+        
+    <button type="submit" class="btn_contend" id="" onclick="togglePopup()" >Contend Debt</button>
+    <!-- next code for popup message for clickin the contend debt button -->
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="top">
+            <h3>Contend Debt</h3>
+            <p>Are you sure you want to contend?</p>
+          </div>
+    
+          <div class="close-btn"> 
+            <a href="#" onclick="closePopup()">Dismiss</a>
+            <Button class="yes" onclick="closePopup()">Yes</Button>
+          </div>
+          
+        </div>
+        
+    </div>
+       <!-- javascript for the popup message -->
+       
+       <script>
+         let Popup = document.getElementById("popup-1")
+     
+
+     function togglePopup(){
+       Popup.classList.add("active")  
+     }
+ 
+     function closePopup(){
+       Popup.classList.remove("active")  
+     }
+
+       </script>
+    </main>
+    <!-- end of main -->
+
+    <!-- footer -->
+    <footer>
+        <footer class="web-footer">
+
+            <!--newsletter-->
+
+            <div class="newsletter">
+
+
+                <form action="/action_page.php">
+                    <h2>Subscribe to our free newsletter</h2>
+
+                    <input class="inp" type="text" placeholder="Enter your email" name="Enter your email" required><input type="submit" value="Subscribe">
+                </form>
+
+
+                <!--newsletter ends-->
+
+                <!--footer-->
+
+                <div class="row">
+                    <div class="coloum">
+                        <h3>Debt Finder</h3>
+
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">What We Offer</a>
+                        <a href="#" class="footer-link">Register</a>
+                        <a href="#" class="footer-link">FAQs</a>
+
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Our Services</h3>
+
+                        <a href="#" class="footer-link">Debtor Listing</a>
+                        <a href="#" class="footer-link">Reciept Management</a>
+                        <a href="#" class="footer-link">Admin Collaboration</a>
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Contact Us</h3>
+
+                        <!--footer icons-->
+
+                        <div class="social-icons">
+                          
+                            <a href="#" ><i class=" fab fa-facebook-f"></i></a>
+                            <a href="#" ><i class=" fab fa-twitter"></i></a>
+                            <a href="#" ><i class=" fa fa-globe"></i></a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="copyright">
+                    <p>Copyright@2022 Debt Finder. All rights reserved</p>
+                    
+                </div>
+
+                <div class="copyright-link">
+                    <a href="#">Terms & Condition</a>
+            
+                </div>
+
+                <div class="copyright-link">
+                   
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+
+                <!--footer ends-->
+
+
+            </div>
+
+
+        </footer>
+         
+    </footer>
+</body>
+</html>
