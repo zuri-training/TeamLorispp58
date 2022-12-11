@@ -223,26 +223,34 @@ input[type=text] {
 }
 
 .div_container{
+
+    
+
     margin-bottom: 1rem;
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: space-around;
     background-color: transparent;
     border: 1px solid #E5958E;
     margin-left: 16rem;
-    width: 60%;
+    width: 75%;
     padding: 0.4rem 4rem;
-}
-.div-container-s{
 
-   
+
+}
+
+
+
+.div-container-s{
+    
     margin-bottom: 1rem;
     text-align: center;
     display: flex;
     justify-content: space-around;
     background-color: #F6DCD9;
     margin-left: 16rem;
-    width: 60%;
+    width: 75%;
     border: 1px solid #1C0435;
     padding: 0.4rem 4rem;
    
@@ -250,4 +258,9 @@ input[type=text] {
 
 .div-container-s .div-links{
     text-align: center;
+}
+
+.view{
+    padding: 0.1rem 0.1rem;
+   
 }
