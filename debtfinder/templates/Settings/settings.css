@@ -95,3 +95,7 @@ input[type=text] {
 input[type=text] {
     border: 1px solid #ccc;  
 }
+
+.left-div{
+    margin-left: 16rem;
+}
