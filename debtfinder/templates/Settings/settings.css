@@ -97,5 +97,29 @@ input[type=text] {
 }
 
 .left-div{
+    margin-top: 3rem;
     margin-left: 16rem;
+    width: 30%;
 }
+
+.divdiv a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #959595;
+}
+
+h5{
+    color: #959595; 
+}
+
+.divdiv a:hover{
+    color: #210440;
+}
+
+
+h5:hover{
+   color: black;
+}
+
+
