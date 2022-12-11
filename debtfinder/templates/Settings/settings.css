@@ -69,31 +69,29 @@ input[type=text] {
 }
   
 .search-container{
-    
+    background-position: 5px 5px;
+    margin-left: 90px;
     padding: 2rem;
     text-align: center;
 }
 
-
-
-  
-.search-container button:hover {
-    /* background: #ccc; */
-}
-  
-
-.search-container {
-      /* float: none; */
+.image{
+    margin-left: 16rem;
+    margin-top: 3rem;
 }
 
-input[type=text],  .search-container button {
-      /* float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px; */
-}
+
+
+
 input[type=text] {
-      border: 1px solid #ccc;  
+    border: 1px solid #ccc;  
+}
+
+.settings{
+
+  margin-left: 16rem ;
+}
+
+input[type=text] {
+    border: 1px solid #ccc;  
 }
