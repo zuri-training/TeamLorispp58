@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .div-wrapper {
+        display: flex;
+    }
+    .upper-div {
+    display: flex;
+    flex-direction: column;
+}
+
+    .inner-div {
+    display: flex;
+    flex-direction: column;
+}
+
+</style>
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="div-wrapper">
+<div>
+        <div class="upper-div">
+        <h2>Owner's Details</h2>
+    <div class="inner-div">{{form.as_p}}</div>
+    </div>
+    </div>
+    
+    <div>
+<div class="upper-div">
+        <h2>School's Details</h2>
+        <div class="inner-div">{{school.as_p}}</div>
+        
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    <input type="submit" value="Create Account">
+</form>
+
+
+
+{% endblock content %}

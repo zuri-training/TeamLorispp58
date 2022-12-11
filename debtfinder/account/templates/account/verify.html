@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>Continue registration as a</h3>
+<div><a href="{% url 'schoolRegView' %}">School Owner</a></div>
+<div><a href="{% url 'parentRegView' %}">Parent</a></div>
+{% endblock content %}
