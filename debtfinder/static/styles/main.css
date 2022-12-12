@@ -386,7 +386,7 @@ span {
 
 /* form input */
 
-input[type=text] {
+input[type="text"] {
     background-color: #210440;
     border: 1px solid #ffffff;
     border-top-left-radius: 10px;
@@ -402,7 +402,7 @@ input[type=text] {
 
 
 
-input[type=submit] {
+input[type="submit"] {
 
     cursor: pointer;
     color: #ffffff;
@@ -414,7 +414,7 @@ input[type=submit] {
 
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
     opacity: 0.8;
 
 }
