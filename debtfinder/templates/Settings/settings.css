@@ -92,9 +92,6 @@ input[type=text] {
   margin-left: 16rem ;
 }
 
-input[type=text] {
-    border: 1px solid #ccc;  
-}
 
 .left-div{
     margin-top: 3rem;
@@ -131,4 +128,22 @@ h5:hover{
 
 .contain {
     right: 10rem;
+}
+
+.form{
+   display: flex; 
+   
+   width: 3rem;
+   
+    
+    
+}
+
+.form input[type="name"]{
+    width: 10rem;
+}
+
+
+.float-right{
+    float: left;
 }
