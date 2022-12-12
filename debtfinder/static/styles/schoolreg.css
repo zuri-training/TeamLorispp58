@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    font-size: .9rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #210440;
+}
+
+a:hover {
+    transform: scale(1.2);
+}
+
+section {
+    height: 600px;
+    width: 800px;
+    margin: 20px auto;
+}
+
+section > p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+form {
+    width: 80%;
+    align-items: center;
+    margin: 50px auto;
+}
+
+
+label {
+    display: block;
+    font-size: 16px;
+    text-align: left;
+}
+
+
+input{
+    border-radius: 10px;
+    border: 2px solid #210440;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 13px 0;
+}
+
+input[type="checkbox"] {
+    display: inline-flex;
+    margin-top: -20px;
+    width: 50%;
+    height: 25px;
+    vertical-align: middle;
+    border: 2px solid #210440;
+    cursor: pointer;
+}
+
+
+
+input:focus {
+    outline: none;
+    border: 2px solid #222;
+    background-color: whitesmoke;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 200px;
+    height: 45px;
+    margin: 1.2rem auto;
+    font-weight: bold;
+    font-size: 16px;
+    background: #210440;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+    background-color: #17032c;
+}
