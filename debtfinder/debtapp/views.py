@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from .forms import DiscussionForm, CommentForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -16,7 +17,7 @@ def aboutUs(request):
 def contactUs(request):
     return render(request, "")
 
-
+@login_required
 def discussions(request):
     discuss = Discussion.objects.all()
     context = {
@@ -24,7 +25,7 @@ def discussions(request):
     }
     return render(request, "", context)
 
-
+@login_required
 def discussView(request, pk):
     discussObj = Discussion.objects.get(id=pk)
     context = {
@@ -34,7 +35,7 @@ def discussView(request, pk):
 
 # create a new discuss
 
-
+@login_required
 def createDiscuss(request):
     form = DiscussionForm()
 
@@ -48,7 +49,7 @@ def createDiscuss(request):
 
 # update a discuss
 
-
+@login_required
 def updateDiscuss(request, pk):
     discussObj = Discussion.objects.get(id=pk)
     form = DiscussionForm(instance=discussObj)
@@ -61,7 +62,7 @@ def updateDiscuss(request, pk):
     context = {"form": form}
     return render(request, "", context)
 
-
+@login_required
 def deleteDiscuss(request, pk):
     discussObj = Discussion.objects.get(id=pk)
     if request.method == "POST":

@@ -64,7 +64,7 @@ class Parent(models.Model):
     email = models.EmailField(max_length=100)
     phone_number = models.CharField(max_length=11)
     student_id = models.CharField(max_length=16)
-    profile_picture = models.FileField(
+    profile_picture = models.ImageField(
         upload_to="img", default="", blank=True, null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     religion = models.CharField(max_length=100)

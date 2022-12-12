@@ -1,49 +1,33 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<style>
-    form {
-        display: flex;
-        flex-direction: column;
-    }
-    .div-wrapper {
-        display: flex;
-    }
-    .upper-div {
-    display: flex;
-    flex-direction: column;
-}
-
-    .inner-div {
-    display: flex;
-    flex-direction: column;
-}
-
-</style>
-<form action="" method="post">
+{% extends 'index.html' %} {% load static %} {% block title %}
+<link
+  href="{% static 'styles/schoolreg.css' %}"
+  rel="stylesheet"
+  type="text/css"
+  media="screen"
+/>
+<title>School Register</title>
+{% endblock title %} {% block content %}
+<section>
+  <p>As you're registering as a school, make sure the School box is ticked</p>
+  <div>{% for message in messages %} {{message}} {% endfor %}</div>
+  <form action="" method="post">
     {% csrf_token %}
-    <div class="div-wrapper">
-<div>
-        <div class="upper-div">
-        <h2>Owner's Details</h2>
-    <div class="inner-div">{{form.as_p}}</div>
-    </div>
-    </div>
     
-    <div>
-<div class="upper-div">
-        <h2>School's Details</h2>
-        <div class="inner-div">{{school.as_p}}</div>
-        
-    </div>
-    </div>
-    </div>
-    
-    
-    
-    <input type="submit" value="Create Account">
-</form>
+    <div class="inform-wrapper">
+      {% for fields in school %}
+      <label for=""><span >{{fields.label_tag}}</span> {{fields}} </label>
 
+      {% endfor %}
+    </div>
+    <div class="inform-wrapper">
+      {% for fields in form %}
+      <label for=""><span>{{fields.label_tag}}</span>{{fields}} </label>
+      {% endfor %}
+    </div>
+    
 
+    <input type="submit" value="Create Account" />
+  </form>
+</section>
 
 {% endblock content %}
