@@ -69,19 +69,19 @@ A platform that allows schools in a certain locality list directory of people ow
 Clone the project
 
 ```
-git clone https://github.com/zuri-training/Project-My-Debtors-Team-38.git
+git clone https://github.com/zuri-training/TeamLorispp58.git
 ```
 
 Go to the project directory
 
 ```
-cd Project-My-Debtors-Team-38
+cd TeamLorispp58.git
 ```
 
 Create a Virtual Environment
 
 ```
-python -m virtualenv env
+python -m venv env
 ```
 
 Activate Virtual Environment
