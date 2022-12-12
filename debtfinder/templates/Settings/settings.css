@@ -78,6 +78,7 @@ input[type=text] {
 .image{
     margin-left: 16rem;
     margin-top: 3rem;
+    width: 20%;
 }
 
 
@@ -121,7 +122,8 @@ h5:hover{
 
 
 .right-div {
-    margin-right: 26rem;
+    /* margin-right: 26rem; */
+    width:40%;
     float: right;
 }
 
@@ -130,20 +132,16 @@ h5:hover{
     right: 10rem;
 }
 
-.form{
-   display: flex; 
-   
-   width: 3rem;
+/* .form{
+  
    
     
+    display: inline-flex;
     
-}
+} */
 
-.form input[type="name"]{
-    width: 10rem;
-}
+/* .form input[type="name"]{
+    width: 13rem;
+} */
 
 
-.float-right{
-    float: left;
-}
