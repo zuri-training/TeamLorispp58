@@ -127,8 +127,13 @@ h5:hover{
     float: right;
 }
 
+.class{
+    float: right;
+}
+
 
 .contain {
+    width: 80%;
     right: 10rem;
 }
 
@@ -144,4 +149,7 @@ h5:hover{
     width: 13rem;
 } */
 
+h3{
+    margin: 2rem  0 2rem 0;
+}
 
