@@ -75,7 +75,7 @@ git clone https://github.com/zuri-training/TeamLorispp58.git
 Go to the project directory
 
 ```
-cd TeamLorispp58.git
+cd TeamLorispp58
 ```
 
 Create a Virtual Environment
