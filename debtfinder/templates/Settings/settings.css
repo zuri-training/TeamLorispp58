@@ -122,7 +122,7 @@ h5:hover{
 
 
 .right-div {
-    /* margin-right: 26rem; */
+   
     width:40%;
     float: right;
 }
@@ -137,19 +137,62 @@ h5:hover{
     right: 10rem;
 }
 
-/* .form{
-  
-   
-    
-    display: inline-flex;
-    
-} */
 
-/* .form input[type="name"]{
-    width: 13rem;
-} */
 
 h3{
     margin: 2rem  0 2rem 0;
 }
 
+.btn-button{
+    padding: 0.4rem 1rem;
+    margin-left: 1rem;
+    background-color: transparent;
+    border: 1px solid #210440;
+    border-radius: 9px;
+    color: #210440;
+}
+
+.btn-button:hover{
+    background-color: #210440;
+    color: #ffffff;
+}
+
+.btn-btnn{
+    padding: 0.5rem 1rem;
+    margin-right: 6rem;
+    background-color: transparent;
+    border: 1px solid #210440;
+    border-radius: 9px;
+    color: #210440;
+}
+
+
+
+.notification{
+    margin-bottom: 2rem;
+}
+
+.btn-btn{
+    background-color: #210440;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #210440;
+    border-radius: 9px;
+}
+
+.btn-btn:hover{
+    background-color: #320d5a7a;
+   
+    border-radius: 9px;
+    color: #210440;
+}
+
+
+p{
+    font-size: 14px;
+}
+input{
+    padding: 0.4rem 1rem;
+    border: 1px solid #210440;
+    border-radius: 4px;
+}
