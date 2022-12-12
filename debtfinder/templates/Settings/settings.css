@@ -123,3 +123,12 @@ h5:hover{
 }
 
 
+.right-div {
+    margin-right: 26rem;
+    float: right;
+}
+
+
+.contain {
+    right: 10rem;
+}
