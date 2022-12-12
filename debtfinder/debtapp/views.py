@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import *
-from .forms import DiscussionForm, CommentForm
+from django.contrib import messages
+from .forms import DiscussionForm, CommentForm, ContactForm
+from django.core.mail import send_mail, BadHeaderError
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -11,11 +13,30 @@ def index(request):
 
 
 def aboutUs(request):
-    return render(request, "")
+    return render(request, "about_us.html")
 
 
 def contactUs(request):
-    return render(request, "")
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            body = {
+                'school_name': form.cleaned_data['school_name'],
+                'email': form.cleaned_data['email'],
+                'website': form.cleaned_data['website'],
+                'message': form.cleaned_data['message']
+            }
+            message = "\n".join(body.values())
+            try:
+                send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
+            except BadHeaderError:
+                messages.error(request, 'Invalid header found.')
+            return redirect ("main:homepage")
+    return render(request, "contact_us.html")
+
+def fAQ(request):
+    return render(request, "faq.html")
 
 @login_required
 def discussions(request):

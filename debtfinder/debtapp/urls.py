@@ -5,6 +5,7 @@ urlpatterns = [
     path("", index, name="homepage"),
     path("about_us/", aboutUs, name="aboutUs"),
     path("contact_us/", contactUs, name="contactUs"),
+    path("frequently_answered_quest", fAQ, name="fAQ"),
     # discussion
     path("discussions/", discussions, name="discussions"),
     path("discussion/<str:pk>", discussView, name="discussView"),

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,42 +16,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
-      *{
+
+
+/* styling the main */
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito Sans', sans-serif;
-
-
-}
-body{
-    min-height: 100vh;
-    background-color:white;
-    
+    font-family: 'Nunito', sans-serif;
 
 }
-
-/* webapp header */
 
 header {
-   
+
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 95px;
+    height: 60px;
     width: 100%;
     background-color: #210440;
-    
+
 
 }
 
-.brand__logo{
+.brand__logo {
     margin-top: 1.5rem;
     height: 67px;
 }
 
-#logo{
-    
+#logo {
+
     height: 41px;
 }
 
@@ -75,11 +71,17 @@ header {
 
 .nav__links a {
     text-decoration: none;
-    
+
     color: #ffffff;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 1rem;
     letter-spacing: 1px;
+}
+
+.nav__links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    text-underline-offset: 8px;
+
 }
 
 
@@ -89,36 +91,38 @@ header {
 
 #header-btn-a {
     text-decoration: none;
-    font-weight: 500;
-    font-size: 16x;
-    font-family:'Poppins', sans-serif;
+    font-size: 1rem;
     color: #ffffff;
-   
+
 }
 
 
 #header-btn-b {
     text-decoration: none;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 1.2rem;
     margin-left: 9px;
     background-color: transparent;
-    padding: 6px 10px;    
+    padding: 6px 10px;
     color: #ffffff;
     border-radius: 9px;
     cursor: pointer;
     border: #ffffff solid 2px;
-   
+
 }
 
-#header-btn-b:hover{
+#header-btn-a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+#header-btn-b:hover {
     cursor: pointer;
     background-color: #ffffff;
     color: #210440;
 
 }
-
-/* styling the main */
 
 
 .container {
@@ -382,35 +386,49 @@ ul {
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <div class="brand__logo">
-          <img src="images/App logo.svg" id="logo" alt="brand-logo" />
-        </div>
+  <nav class="navbar">
+    <div class="brand__logo">
+      <a href="{% url 'homepage' %}"
+        ><img
+          src="{% static 'img/landimg/logo.svg' %}"
+          id="logo"
+          alt="brand-logo"
+      /></a>
+    </div>
 
-        <ul class="nav__links">
-          <li>
-            <a href="">Home</a>
-          </li>
+    <ul class="nav__links">
+      <li>
+        <a href="{% url 'homepage' %}">Home</a>
+      </li>
 
-          <li>
-            <a href="">About Us</a>
-          </li>
+      <li>
+        <a href="{% url 'aboutUs' %}">About Us</a>
+      </li>
 
-          <li>
-            <a href="">Contact Us</a>
-          </li>
+      <li>
+        <a href="{% url 'contactUs' %}">Contact Us</a>
+      </li>
 
-          <li>
-            <a href="">FAQs</a>
-          </li>
-        </ul>
+      <li>
+        <a href="{% url 'fAQ' %}">FAQs</a>
+      </li>
+    </ul>
 
-        <div>
-          <a href="" id="header-btn-a">Log In </a>
-          <a href="" id="header-btn-b">Register </a>
-        </div>
-      </nav>
-    </header>
+    {% if request.user.is_authenticated %}
+    <div>
+      <a href="{% url 'logout' %}" id="header-btn-a">Log Out </a>
+    </div>
+
+    {% else %}
+
+    <div>
+      <a href="{% url 'login' %}" id="header-btn-a">Log In </a>
+      <a href="{% url 'createAccount' %}" id="header-btn-b">Register </a>
+    </div>
+    {% endif %}
+  </nav>
+</header>
+    
 
     <main>
       <div class="container">
@@ -481,53 +499,101 @@ ul {
           </div>
         </div>
       </div>
-      <script src="script.js"></script>
+     
     </main>
 
     <!-- footer -->
-    <footer class="footer">
-      <div class="wrapper">
-        <div class="newsletter">
-          <h2>Subscribe to our Free Newsletter</h2>
-          <div class="form">
-            <input class="form-control" placeholder="Enter Your Email..." />
-            <button class="btn3">Subscribe</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="footer-col">
-            <h4>Debt Finder</h4>
-            <ul>
-              <li><a href="aboutus">About Us</a></li>
-              <li><a href="whatweoffer">What We Offer</a></li>
-              <li><a href="reg">Register</a></li>
-              <li><a href="faq">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Our Service</h4>
-            <ul>
-              <li><a href="debtlisting">Debt Listing</a></li>
-              <li><a href="receiptmanagement">Receipt Management</a></li>
-              <li><a href="admin">Admin Collaboration</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Contact Us</h4>
-            <div class="social-links"></div>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-globe"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>Copyright &copy; 2022 Debt Finder. All right reserved</p>
-        <div class="footer-menu">
-          <a href="#privacy policy">Privacy Policy</a>
-          <a href="# terms and condition">Terms and Condition</a>
-        </div>
-      </div>
-    </footer>
+            {% load static %}
+<link rel="stylesheet" href="{% static 'styles/footer.css' %}" />
+        <footer class="web-footer">
+
+            <!--newsletter-->
+
+            <div class="newsletter">
+
+
+                <form action="/action_page.php">
+                    <h2>Subscribe to our free newsletter</h2>
+
+                    <input type="text" placeholder="Enter your email" name="Enter your email" required><input type="submit" value="Subscribe">
+                </form>
+
+
+                <!--newsletter ends-->
+
+                <!--footer-->
+
+                <div class="row">
+                    <div class="coloum">
+                        <h3>Debt Finder</h3>
+
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">What We Offer</a>
+                        <a href="#" class="footer-link">Register</a>
+                        <a href="#" class="footer-link">FAQs</a>
+
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Our Services</h3>
+
+                        <a href="#" class="footer-link">Debtor Listing</a>
+                        <a href="#" class="footer-link">Reciept Management</a>
+                        <a href="#" class="footer-link">Admin Collaboration</a>
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Contact Us</h3>
+
+                        <!--footer icons-->
+
+                        <div class="social-icons">
+                            <a href="#" title="facebook" class="icon">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" title="twitter" class="icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" title="web" class="icon">
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="copyright">
+                    <div>
+                    <p>Copyright@2022 Debt Finder. All rights reserved</p>
+                    </div>
+                    
+                    
+                
+
+                    <div class="copyright-link">
+                    <a href="#">Terms & Condition</a>
+            
+
+                   
+                    <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!--footer ends-->
+
+
+            </div>
+
+
+        </footer>
+
+     <script src="{% static 'js/script.js' %}"></script>
   </body>
 </html>

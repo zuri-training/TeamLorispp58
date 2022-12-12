@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>About Us</title>
+
+  <link rel="stylesheet" href="{% static 'styles/about.css' %}">
+
+
+
+</head>
+
+<body>
+  <header>
+  <nav class="navbar">
+    <div class="brand__logo">
+      <a href="{% url 'homepage' %}"
+        ><img
+          src="{% static 'img/landimg/logo.svg' %}"
+          id="logo"
+          alt="brand-logo"
+      /></a>
+    </div>
+
+    <ul class="nav__links">
+      <li>
+        <a href="{% url 'homepage' %}">Home</a>
+      </li>
+
+      <li>
+        <a href="{% url 'aboutUs' %}">About Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'contactUs' %}">Contact Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'fAQ' %}">FAQs</a>
+      </li>
+    </ul>
+
+    {% if request.user.is_authenticated %}
+    <div>
+      <a href="{% url 'logout' %}" id="header-btn-a">Log Out </a>
+    </div>
+
+    {% else %}
+
+    <div>
+      <a href="{% url 'login' %}" id="header-btn-a">Log In </a>
+      <a href="{% url 'createAccount' %}" id="header-btn-b">Register </a>
+    </div>
+    {% endif %}
+  </nav>
+</header>
+
+  <main>
+    <article>
+
+    
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="about" aria-labelledby="about-label">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="{% static 'img/aboutus1.png' %}" width="400" height="400" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+
+            <ul>
+
+              <li class="about-item">
+                <div class="accordion-card expanded" data-accordion>
+
+                  <h3 class="card-title">
+
+                      <span class="span h3" style=" margin-left:20px ;">What Do We Offer You ?</span>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Debt Finder app is an online app that allows
+                    school in certain locality to list directory of people
+                    owing them academic finances and to keep them from
+                    going to other schools.
+                  </p>
+
+                </div>
+              </li>
+
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <section class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+
+         
+
+          <div class="about-content">
+
+
+            <ul>
+
+              <li class="about-item">
+                <div class="accordion-card expanded" data-accordion>
+
+                  <h3 class="card-title">
+
+                      <span class="span h3"  style=" margin-left:20px ;">Our Core Values</span>
+                    
+                  </h3>
+
+                  <p class="accordion-content">
+                    Our Company values are built upon the satisfaction of our
+                    users. We have partnered with over hundred of users, who have 
+                    built trust with us over the years.Our principles ensures the
+                    free flow of effective Managerial skills, good users experience,
+                    and making sure production and usability are implemented.
+                  </p>
+
+                </div>
+              </li>
+
+             
+
+            </ul>
+
+          </div>
+
+
+          <figure class="about-banner">
+            <img src="{% static 'img/aboutus2.png' %}"  loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+
+   <div class="company">
+    <section class="company-vision" >
+        <div class="content">
+            <h4 class="company-head-1">Our Vision</h4>
+            <p>To build a community where academic debt can be tracked by
+              the school authorities, reducing the fear of people <running-off>with the school finances.</running-off>
+            </p>
+         </div>
+      </section>
+      <section class="company-mission" >
+        <div class="content">
+            <h4 class="company-head-2">Our Achievement</h4>
+            <p>My Debtors App has assisted over thousands of schools in tracking
+              down their debtors, by keeping records of all required data.
+            </p>
+         </div>
+      </section>
+   </div>
+   
+
+
+   <section class="s-review">
+            <div class="review-copy">
+                <h2>Reviews</h2>
+                <p>See What Our Customers Are Saying About Us</p>
+            </div>
+
+            <div class="previous-arrow">
+                <i></i></div><divclass="next-arrow"><i></i>
+            </div>
+
+
+            <div class="card-container">
+                <div class="card">
+                    <img src="{% static 'img/landimg/profile1.png' %}" class="profile-img">
+                    <h4>Shabnah Saif</h4>
+                    <p class="img-p">School Owner</p>
+                    <p>A great app for school<span>owners to track debtors. I</span>
+                        have been using this tool<span></p>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'img/landimg/profile2.png' %}" class="profile-img">
+                    <h4>Karen Smith</h4>
+                    <p class="img-p">School Owner</p>
+                    <p>Debt finder have being a
+                        <span>great tool for my team and I,</span>
+                        Easy to user features</p>
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'img/landimg/profile3.png' %}" class="profile-img">
+                    <h4>Abubakar Aremu</h4>
+                    <p class="img-p">Principal</p>
+                    <p>A debtor listing app has<span>
+                            never been these great. I</span>
+                        love been a debt finder user</p>
+                </div>
+
+
+                <div class="card">
+                    <img src="{% static 'img/landimg/profile4.png' %}" class="profile-img">
+                    <h4>Amir  Prakash</h4>
+                    <p class="img-p">School Manager</p>
+                    <p>I will recommed this tool for<span>
+                            any school owner looking to</span>
+                        run their school efficiently</p>
+                </div>
+            </div>
+
+        </section>
+
+      
+   
+
+
+
+   <div class="cta-btn">
+    <a href="{% url 'createAccount' %}" class="getstarted">Click to Get Started With Us</a>
+</div>
+</article>
+    
+  </main>
+
+  <footer class="web-footer">
+
+            <!--newsletter-->
+
+            <div class="newsletter">
+
+
+                <form action="/action_page.php">
+                    <h2>Subscribe to our free newsletter</h2>
+
+                    <input type="text" placeholder="Enter your email" name="Enter your email" required><input type="submit" value="Subscribe">
+                </form>
+
+
+                <!--newsletter ends-->
+
+                <!--footer-->
+
+                <div class="row">
+                    <div class="coloum">
+                        <h3>Debt Finder</h3>
+
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">What We Offer</a>
+                        <a href="#" class="footer-link">Register</a>
+                        <a href="#" class="footer-link">FAQs</a>
+
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Our Services</h3>
+
+                        <a href="#" class="footer-link">Debtor Listing</a>
+                        <a href="#" class="footer-link">Reciept Management</a>
+                        <a href="#" class="footer-link">Admin Collaboration</a>
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Contact Us</h3>
+
+                        <!--footer icons-->
+
+                        <div class="social-icons">
+                            <a href="#" title="facebook" class="icon">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" title="twitter" class="icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" title="web" class="icon">
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="copyright">
+                    <div>
+                    <p>Copyright@2022 Debt Finder. All rights reserved</p>
+                    </div>
+                    
+                    
+                
+
+                    <div class="copyright-link">
+                    <a href="#">Terms & Condition</a>
+            
+
+                   
+                    <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!--footer ends-->
+
+
+            </div>
+
+
+        </footer>
+
+
+
+
+<!-- 
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
