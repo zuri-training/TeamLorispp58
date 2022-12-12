@@ -1,96 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Database</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="database.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Database</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="database.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
 
-<body>
+    
 
-   
+    <body>
 
-    <div class="sidenav">
 
-        <div class="brand-logo">
-            <img src="img/LOGO (2).svg" alt="logo" id="logo">
+        <div class="sidenav">
+
+            <div class="brand-logo">
+                <img src="img/LOGO (2).svg" alt="logo" id="logo">
+            </div>
+
+            <a href="">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Home
+            </a>
+
+            <a href="">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                Profile
+            </a>
+
+            <a href="">
+                <i class="fa fa-database" aria-hidden="true"></i>
+                Debtor Database
+            </a>
+
+            <a href="">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                School
+            </a>
+
+            <a href="">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                Add New Debtor
+            </a>
+
+            <a href="">
+                <i class="fa fa-id-card" aria-hidden="true"></i>
+                Student Checker
+            </a>
+
+
+            <div class="bottom-nav">
+                <a href="">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    Settings
+                </a>
+
+                <a href="">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Help & Support
+                </a>
+
+                <a href="">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Log Out
+                </a>
+            </div>
         </div>
 
-        <a href=""><i class="fa fa-home" aria-hidden="true"></i>
-            Home
-        </a>
-
-        <a href=""><i class="fa fa-user" aria-hidden="true"></i>
-            Home
-        </a>
-
-        <a href=""><i class="fa fa-database" aria-hidden="true"></i>
-            Debtor Database
-        </a>
-        
-        <a href=""><i class="fa fa-graduation-cap" aria-hidden="true"></i>
-            School
-        </a>
-
-        <a href=""><i class="fa fa-bars" aria-hidden="true"></i>
-            Add New Debtor
-        </a>
-
-        <a href=""><i class="fa fa-id-card" aria-hidden="true"></i>
-            Student Checker
-        </a>
 
 
-        <div class="bottom-nav">
-            <a href="">
-                Settings
-            </a>
-    
-            <a href="">
-               Help & Support
-            </a>
-    
-            <a href="">
-               Log Out
-            </a> 
-      </div>
-   </div>
-
-   
-   
+        <div class="main">
+            <div class="search-container">
 
 
+                <form action="/action_page.php">
+                    <label>
 
-   <div class="main">
-        <div class="search-container">
+                        <i class="fa fa-search"></i><input type="text" placeholder="Search" name="search">
 
-            
-            <form action="/action_page.php">
+                    </label>
+
+                </form>
+            </div>
+
+            <div class="btn">
+                <button type="submit" class="pending">Pending</button>
+                <button class="completed">Completed</button>
+
+            </div>
+
+            <div class="btn1">
+                <button class="filter">Filter:<i class="fa fa-filter"></i></button>
+            </div>
+
+            <div class="div-container">
+                <div class="div-link">
+                    <a href="">Debtor’s Name</a>
+                </div>
+
+                <div class="div-link">
+                    <a href="">Amount</a>
+                </div>
+
+                <div class="div-link">
+                    <a href="">Contention Date</a>
+                </div>
+
+                <div class="div-link">
+                    <a href="">Status</a>
+                </div>
+
+                <div class="div-link">
+                    <a href="">View Details</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="divcontainer">
+            <div class="div-link">
+                <a href="">John Peace</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">#54,800</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">30/11/2022</a>
+            </div>
+
+            <div class="div-link">
+                <a href="" class="successful">Successful</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">View Details</a>
+            </div>
+
+        </div>
+
+
+        <div class="divcontainer">
+            <div class="div-link">
+                <a href="">Ogor Akin</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">#33,000</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">30/11/2022</a>
+            </div>
+
+            <div class="div-link">
+                <a href="" class="failed">Failed</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">View Details</a>
+            </div>
+
+        </div>
+
+        <div class="divcontainer">
+            <div class="div-link">
+                <a href="">Ogor Akin</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">#33,000</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">30/11/2022</a>
+            </div>
+
+            <div class="div-link">
+                <a href="" class="failed">Failed</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">View Details</a>
+            </div>
+
+        </div>
+
+
+        <div class="divcontainer">
+            <div class="div-link">
+                <a href="">John Peace</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">#58,800</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">30/11/2022</a>
+            </div>
+
+            <div class="div-link">
+                <a href="" class="successful">Successful</a>
+            </div>
+
+            <div class="div-link">
+                <a href="">View Details</a>
+            </div>
+
+        </div>
+
+
+        <div class="section">
+
+          <h3>Contention  List</h3>
                 
-                <input type="text" placeholder="Search"  name="search">
-                <i class="fa fa-search">
-                    
-                </i>
-            </form>
-        </div>
+          <div class="div_container">
+                <div class="div-links">
+                    <a href="">Name of Child</a>
+                </div>
 
-        <div class="btn">
-            <button class="pending">Pending</button>
-            <button class="completed">Completed</button>
-            
-        </div>
+                <div class="div-links">
+                    <a href="">Students ID</a>
+                </div>
 
-        <div class="btn1">
-            <button class="filter">Filter:</button>
-        </div>
-   </div>
+                <div class="div-links">
+                    <a href="">Amount</a>
+                </div>
+
+                <div class="div-links">
+                    <a href="">Date</a>
+                </div>
+
+                <div class="div-links">
+                    <a href=""> Payment Receipt</a>
+                </div> 
+          </div>
+
+
+
+
+            <div class="div-container-s">
+                <div class="div-links">
+                    <a href="">Peace James</a>
+                </div>
     
-</body>
+                <div class="div-links">
+                    <a href="">1563452</a>
+                </div>
+    
+                <div class="div-links">
+                    <a href="">#26,000</a>
+                </div>
+    
+                <div class="div-links">
+                    <a href="">12/10/2022</a>
+                </div>
+    
+                <div class="div-links">
+                    <button class="view"><a href="">View Details</a></button>
+                </div>
+    
+            </div>
+
+
+
+            
+          <div class="div-container-s">
+                <div class="div-links">
+                    <a href="">Blessing Okpor</a>
+                </div>
+
+                <div class="div-links">
+                    <a href="">2456762</a>
+                </div>
+
+                <div class="div-links">
+                    <a href="">#54,600</a>
+                </div>
+
+                <div class="div-links">
+                    <a href="" class="failed">6/10/2022</a>
+                </div>
+
+                <div class="div-links">
+                    <button class="view"><a href="">View Details</a></button>
+                </div>
+          </div>
+
+
+               
+          <div class="div-container-s">
+                <div class="div-links">
+                    <a href="">Peace James</a>
+                </div>
+
+                <div class="div-links">
+                    <a href="">1563762</a>
+                </div>
+
+                <div class="div-links">
+                    <a href="">#102,500</a>
+                </div>
+
+                <div class="div-links">
+                    <a href="" class="failed">2/10/2022</a>
+                </div>
+
+                <div class="div-links">
+                    <button class="view"><a href="">View Details</a></button>
+                </div>
+         </div>
+    
+        </div>
+
+
+       
+
+    </body>
 </html>
