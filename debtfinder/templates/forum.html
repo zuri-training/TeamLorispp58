@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      
+        <div class="sidenav">
+
+            <div class="brand-logo">
+                <img src="LOGO.svg" alt="logo" id="logo">
+            </div>
+            <nav >
+                <div class="navigation">
+                    <ul>
+                       <a href=""><i class="fa fa-home" aria-hidden="true"></i>home</a>
+                       <a href=""><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                       <a href=""><i class="fa fa-database" aria-hidden="true"></i> Debtor Database</a>
+                       <a href=""><i class="fa fa-graduation-cap" aria-hidden="true"></i>Schools</a>
+                       <a href=""><i class="fa fa-bars" aria-hidden="true"></i> Add New Debtors</a>
+                       <a href=""><i class="fa fa-id-card" aria-hidden="true"></i>Student Checker</a>
+                    </ul>
+    
+    
+                </div>
+    
+                <div class="bottom-nav">
+                    <ul>
+                      <a href="">  <i class="fa fa-cog" aria-hidden="true"></i>Settings</a>
+                        <a href=""><i class="fa fa-question-circle" aria-hidden="true"></i>Help & Support</a>
+                        <a href=""><i class="fa fa-sign-out" aria-hidden="true"></i>logout</a>
+                    </ul>
+    
+                </div>
+    
+
+        </div>
+
+    </header>
+
+    <main>
+        <div class="search">
+        
+              <input type="text" name="search"placeholder="search">
+              <i id="search" class="fa fa-search" aria-hidden="true"></i>
+             
+                <!-- <i  id="bell" class="fa fa-bell" aria-hidden="true"></i>
+              -->
+        </div>
+        <h2 class="start">Start Discussion</h2>
+
+        <div class="complaintbox">
+
+           <div class="p-nd-n">
+<!-- p-nd-n means pic and name box -->
+             <img src="Ellipse 21 (2).svg" alt="">
+               <div class="user">
+                <div>
+                   <h4> Adeduro Esther </h4>
+                    17:34 . 20 Dec
+                
+                </div>
+              
+               </div>
+               <div class="complaint">complaint</div>
+
+           </div> 
+          <!-- for the comments -->
+                <div class="comment">
+                    <div>Hello, recently i received news from my daugther (Priscilla Adeduro) about a new policy in place concerning payment of fees. And tha fees are now to be paid in fullbefore resumption or a lastest first week of resumption.could the reason of this change be explained in detail a... <a href="">see more</a> </div>
+                </div> 
+
+                 <!-- html for the like -->
+                <div class="reactionbox">
+                 <div class="reaction">
+             <button onclick="like()" id="thumbsUp"> <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+             <input type="number" id="input1" class="top" value="21">
+                <button onclick="unlike()" id="thumbsDown"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                <input type="number" id="input2" class="top" value="5">
+                 </div>             
+                  </div>
+                  <div class="p-nd-n">
+                    <!-- second comment -->
+                    <!-- p-nd-n means pic and name box -->
+                                 <img src="Ellipse 22.svg" alt="">
+                                   <div class="user">
+                                    <div class="name">
+                                       <h4>  Ben Somtochukwu</h4>
+                                       <i class="fa fa-reply" aria-hidden="true"></i>replying to Adeduro Esther
+                    
+                                    </div>
+                                   </div>
+                                  
+                    
+                               </div> 
+                              <!-- for the comments -->
+                                    <div class="comment">
+                                        <div>Hello Mrs Adeduro, our sincere apologies for any misunderstanding.The reason for this change is due to reoccurimg issues of parents who keep their kids till mid semesters then transfer them out without paying outstanding debt.In order to combat this the new policy was made. </div>
+                                    </div> 
+                                        <!-- html for the like -->
+                
+                    <div class="reaction">
+                        <button onclick="slike()" id="sthumbsUp"> <i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+                        <input type="number" id="sinput1" class="top" value="3">
+                       <button onclick="sunlike()" id="sthumbsDown"><i class="fa fa-thumbs-down" aria-hidden="true"></i></button>
+                       <input type="number" id="sinput2" class="top" value="0">
+                      
+                    </div>             
+                    
+                          <!-- write a message box -->
+                     <div class="write">
+                        <input type="text" placeholder="write a message">
+                     </div>
+                    </div>
+                  
+                    
+            </div>
+
+
+
+           <!-- annoucement comment -->
+           <div class="complaintbox">
+
+            <div class="p-nd-n">
+ <!-- p-nd-n means pic and name box -->
+              <img src="Ellipse 21.svg" alt="">
+                <div class="user">
+                 <div class="name">
+                    <h4> Elis Gabriel </h4>
+                     05:24 . 17 Nov
+                     </div>
+                    
+                </div>
+                <div class="announce">
+                    annoucement
+                 </div>
+               
+            </div> 
+             <!-- for the comments -->
+             <div class="comment">
+                <div>   Our esteemed parents , please be informed that full details of the policy change of our school have been sent over to your emails and you may check them for any issues. Responses and suggestions are very much welcome as well. </div>
+            </div> 
+
+               <!-- write a message box -->
+               <div class="write">
+                <input type="text" placeholder="write a message">
+             </div>
+ 
+             </div>
+ 
+        </div>
+
+        <script>
+            
+let like = document.querySelector('#thumbsUp');
+let unlike = document.querySelector('#thumbsDown');
+let input1 = document.querySelector('#input1');
+let input2 = document.querySelector('#input2');
+
+like.addEventListener('click',()=> {
+    like.style.color = "blue";
+    unlike.style.color = "black";
+    input1.value = parseInt(input1.value) + 1;
+    // input2.value = parseInt(input1.value) - 1;
+    input1.style.color = "black";})
+
+    unlike.addEventListener('click',()=> {
+        unlike.style.color = "blue";
+        like.style.color = "black";
+    input2.value = parseInt(input2.value) + 1;
+    // input1.value = parseInt(input2.value) - 1;
+    
+    input2.style.color = "#000";})
+
+
+    
+let slike = document.querySelector('#sthumbsUp');
+let sunlike = document.querySelector('#sthumbsDown');
+let sinput1 = document.querySelector('#sinput1');
+let sinput2 = document.querySelector('#sinput2');
+
+slike.addEventListener('click',()=> {
+    slike.style.color = "blue";
+    sunlike.style.color = "black";
+    sinput1.value = parseInt(sinput1.value) + 1;
+    // sinput2.value = parseInt(sinput1.value) - 1;
+    sinput1.style.color = "black";})
+
+    sunlike.addEventListener('click',()=> {
+        sunlike.style.color = "blue";
+        slike.style.color = "black";
+    sinput2.value = parseInt(sinput2.value) + 1;
+    // sinput1.value = parseInt(sinput2.value) - 1;
+    
+    sinput2.style.color = "#000";})
+
+
+        </script>
+    </main>
+</body>
+</html>

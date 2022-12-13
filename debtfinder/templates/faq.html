@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQs</title>
+    <link rel="stylesheet" href="faq.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+
+
+/* styling the main */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    background-color: #210440;
+
+
+}
+
+.brand__logo {
+    margin-top: 1.5rem;
+    height: 67px;
+}
+
+#logo {
+
+    height: 41px;
+}
+
+/* navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav__links li {
+    padding-left: 3rem;
+}
+
+.nav__links a {
+    text-decoration: none;
+
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.nav__links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    text-underline-offset: 8px;
+
+}
+
+
+/* navigation bar ends */
+
+/* header primary btn */
+
+#header-btn-a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+
+}
+
+
+#header-btn-b {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 9px;
+    background-color: transparent;
+    padding: 6px 10px;
+    color: #ffffff;
+    border-radius: 9px;
+    cursor: pointer;
+    border: #ffffff solid 2px;
+
+}
+
+#header-btn-a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+#header-btn-b:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #210440;
+
+}
+
+
+.container {
+    margin: 0 auto;
+    padding: 4rem;
+    width: 48rem;
+  }
+  .container h2 {
+      text-align: center;
+      
+  }
+  
+  .accordion {
+    margin-top: 20px;
+  }
+  
+  .accordion .accordion-item {
+    border-bottom: 1px solid var(black);
+  }
+  
+  .accordion .accordion-item button[aria-expanded="true"] {
+    border-bottom: 1px solid var(black);
+  }
+  
+  .accordion button {
+    position: relative;
+    display: inline;
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 400;
+    border: 2px solid #210440;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+  }
+  
+  .accordion button:hover,
+  .accordion button:focus {
+    cursor: pointer;
+    color: var(black);
+  }
+  
+  .accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+  }
+  
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+  }
+  
+  .accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+  
+  .accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  }
+  
+  .accordion .accordion-item button[aria-expanded="true"] {
+    color: var(black);
+  }
+  
+  .accordion .accordion-item button[aria-expanded="true"] .icon::after {
+    width: 0;
+  }
+  
+  .accordion .accordion-item button[aria-expanded="true"] + .content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+  }
+  
+  .content {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 200ms linear, max-height 200ms linear;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 1em 0;
+  }
+
+
+
+  /* styling the footer */
+
+h2{
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.form{
+  width: 60%;
+  display: flex;
+  margin: auto;
+  margin-bottom: 15px;
+  border: 1px solid #B5ABBF;
+  border-radius: 5px;
+  padding: 5px;
+  
+}
+input{
+  flex-grow: 2;
+  border: none;
+  background-color: #210440;
+  
+}
+
+input:hover{
+  background-color: #210440;
+  opacity: 0.3;
+}
+
+input:focus {
+  outline: none;
+  }
+.btn3{
+  padding: 10px;
+  border: 1px solid #B5ABBF;  
+  border-radius: 1px;
+  color: #fff;
+  width: 30%;
+  background: #B5ABBF;
+  padding: 10px;
+  
+}
+.btn3:hover{
+  background-color: #210440;
+  opacity: .3;
+  color: #fff;
+}
+
+.wrapper{
+  max-width: 1170px;
+  margin: auto;
+  height: 300px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul {
+  list-style-type: none;
+}
+
+.footer {
+  background-color: #210440;
+  padding: 70px 0;
+  
+}
+.footer-col{
+  width: 33.3%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before{
+  content:'';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.footer-col ul li:not(:last-child) {
+   margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #B5ABBF;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  color: #B5ABBF;
+  padding-left: 8px;
+}
+.social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: #B5ABBF;
+
+}
+
+.footer-col .social-links a:hover{
+  color: white;
+  background-color:#B5ABBF ;
+  opacity: .3;
+}
+
+.footer-bottom{
+  display: flex;
+  color: #B5ABBF;
+  margin-top: 50px;
+  justify-content: space-around;
+  padding-top: 5px;
+
+   }
+
+   .footer-bottom a{
+    text-decoration: none;
+    color: #B5ABBF;
+    margin-left: 100px;
+    text-transform: capitalize;
+   }
+   
+   
+   .footer-bottom .footer-menu{
+    color: #B5ABBF;
+   }
+    </style>
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+    <div class="brand__logo">
+      <a href="{% url 'homepage' %}"
+        ><img
+          src="{% static 'img/landimg/logo.svg' %}"
+          id="logo"
+          alt="brand-logo"
+      /></a>
+    </div>
+
+    <ul class="nav__links">
+      <li>
+        <a href="{% url 'homepage' %}">Home</a>
+      </li>
+
+      <li>
+        <a href="{% url 'aboutUs' %}">About Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'contactUs' %}">Contact Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'fAQ' %}">FAQs</a>
+      </li>
+    </ul>
+
+    {% if request.user.is_authenticated %}
+    <div>
+      <a href="{% url 'logout' %}" id="header-btn-a">Log Out </a>
+    </div>
+
+    {% else %}
+
+    <div>
+      <a href="{% url 'login' %}" id="header-btn-a">Log In </a>
+      <a href="{% url 'createAccount' %}" id="header-btn-b">Register </a>
+    </div>
+    {% endif %}
+  </nav>
+</header>
+    
+
+    <main>
+      <div class="container">
+        <h2>Frequently Asked Questions(FAQs)</h2>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button aria-expanded="false">
+              <span class="accordion-title"
+                >What happens if i dont pay my debt before the deadline?</span
+              >
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                viverra suspendisse potenti.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button aria-expanded="false">
+              <span class="accordion-title">
+                Do i need to open a different account for each ward i have in
+                school?</span
+              >
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="content">
+              <p>
+                As a parent, you are only required to open one Account for your
+                wards
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button aria-expanded="false">
+              <span class="accordion-title"
+                >How do i upload my proof of payment?</span
+              >
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                viverra suspendisse potenti.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button aria-expanded="false">
+              <span class="accordion-title"
+                >How do i get in contact with the school Accountant?</span
+              >
+              <span class="icon" aria-hidden="true"></span>
+            </button>
+            <div class="content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Elementum sagittis vitae et leo duis ut. Ut tortor pretium
+                viverra suspendisse potenti.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    </main>
+
+    <!-- footer -->
+            {% load static %}
+<link rel="stylesheet" href="{% static 'styles/footer.css' %}" />
+        <footer class="web-footer">
+
+            <!--newsletter-->
+
+            <div class="newsletter">
+
+
+                <form action="/action_page.php">
+                    <h2>Subscribe to our free newsletter</h2>
+
+                    <input type="text" placeholder="Enter your email" name="Enter your email" required><input type="submit" value="Subscribe">
+                </form>
+
+
+                <!--newsletter ends-->
+
+                <!--footer-->
+
+                <div class="row">
+                    <div class="coloum">
+                        <h3>Debt Finder</h3>
+
+                        <a href="#" class="footer-link">About Us</a>
+                        <a href="#" class="footer-link">What We Offer</a>
+                        <a href="#" class="footer-link">Register</a>
+                        <a href="#" class="footer-link">FAQs</a>
+
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Our Services</h3>
+
+                        <a href="#" class="footer-link">Debtor Listing</a>
+                        <a href="#" class="footer-link">Reciept Management</a>
+                        <a href="#" class="footer-link">Admin Collaboration</a>
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Contact Us</h3>
+
+                        <!--footer icons-->
+
+                        <div class="social-icons">
+                            <a href="#" title="facebook" class="icon">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" title="twitter" class="icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" title="web" class="icon">
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="copyright">
+                    <div>
+                    <p>Copyright@2022 Debt Finder. All rights reserved</p>
+                    </div>
+                    
+                    
+                
+
+                    <div class="copyright-link">
+                    <a href="#">Terms & Condition</a>
+            
+
+                   
+                    <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!--footer ends-->
+
+
+            </div>
+
+
+        </footer>
+
+     <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

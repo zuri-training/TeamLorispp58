@@ -1,19 +1,21 @@
+from django.conf import settings
+
 from django.db import models
-from account.models import *
+
 
 # Create your models here.
 class Discussion(models.Model):
-    created_by = models.ForeignKey(School, on_delete=models.CASCADE)
-    created_on = models.DateTimeField(auto_now=True)
-    updated_on = models.DateTimeField(auto_now=True)
+    created_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Creator")
+    created_on = models.TimeField(auto_now=True)
+    updated_on = models.TimeField(auto_now=True)
     body = models.TextField()
     topics = models.ManyToManyField("Topic")
 
 class Comment(models.Model):
-    discussion = models.ForeignKey(Discussion, on_delete=models.CASCADE)
+    comment_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, verbose_name="Comment By")
     body = models.TextField()
-    created_on = models.DateTimeField(auto_now=True)
-    updated_on = models.DateTimeField(auto_now=True)
+    created_on = models.TimeField(auto_now=True)
+    updated_on = models.TimeField(auto_now=True)
 
     def __str__(self):
         return self.body

@@ -1,0 +1,58 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<link href="{% static 'styles/login.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <title>Login</title>
+{% endblock title %}
+
+{% block content %}
+<section>
+<div class="form-wrapper">
+<h3>LOGIN</h3>
+
+<img src="{% static 'img/login.png' %}" alt="" class="login-image">
+
+<form action="" method="POST" class="form">
+    {% csrf_token %}
+{% for message in messages  %}
+<div class="message">{{message}}</div>
+{% endfor %}
+
+<label for="email">Email 
+    <input type="email" name="email" id="email" class="input-control" placeholder="Email address" required>
+</label>
+    
+
+    <label for="password">Password 
+        <input type="password" name="password" id="password" class="input-control" placeholder="Password" required>
+    </label>
+    <div class="bottom">
+        <label for="checkbox">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            Keep me logged in
+        </label>
+        <a href="">Forgotten password?</a>
+    </div>
+    
+
+    
+    <input type="submit" value="Log In" class="btn">
+    <div class="flex-column">
+        <div class="flex">
+            <span></span>
+        <p> Don't have an account? </p>
+         <span></span>
+        </div>
+        <a href="{% url 'createAccount' %}">
+            Register here
+        </a>
+    </div>
+    
+</form>
+ 
+
+</section>
+
+
+{% endblock content %}
