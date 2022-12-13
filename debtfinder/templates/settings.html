@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Settings</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'styles/settings.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    
+
+    <body>
+
+
+        <div class="sidenav">
+
+            <div class="brand-logo">
+                <img src="img/LOGO (2).svg" alt="logo" id="logo">
+            </div>
+
+            <a href="">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                Home
+            </a>
+
+            <a href="">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                Profile
+            </a>
+
+            <a href="">
+                <i class="fa fa-database" aria-hidden="true"></i>
+                Debtor Database
+            </a>
+
+            <a href="">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                School
+            </a>
+
+            <a href="">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                Add New Debtor
+            </a>
+
+            <a href="">
+                <i class="fa fa-id-card" aria-hidden="true"></i>
+                Student Checker
+            </a>
+
+
+            <div class="bottom-nav">
+                <a href="">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                    Settings
+                </a>
+
+                <a href="">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Help & Support
+                </a>
+
+                <a href="">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Log Out
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="main">
+            <div class="search-container">
+
+
+                <form action="/action_page.php">
+                   
+
+                    <input type="text" placeholder="Search" name="search">
+                      
+                   
+                       
+                   
+
+                </form>
+            </div>
+
+
+
+
+            
+            <div class="right-div">
+                <div class="contain">
+                    <h3>Account Settings</h3><span>
+                    <p>Personal Information
+
+                    </p><span>
+
+                    <div class="form">
+                        <form action="">
+                            <div class="class">
+                                <p>Last name</p>
+                                <input type="name" id="input" name="firstname" required>
+
+
+                            </div>
+
+                            <div class="float-right">
+                                <p>First name</p>
+                                <input type="name" id="input" name="lastname" required>
+                            </div>
+
+                            <div>
+                                <p>Email address</p>
+                                <input type="email" id="input" name="email" required>
+                            </div>
+                            <br>
+                            <hr>
+                            
+
+                            
+                           
+                            
+                        </form>
+                        
+                        
+                        
+                    </div>  
+                    
+                    <div>
+                        <h3>
+                            Security Settings
+                        </h3>
+
+                        <form action>
+                            <div>
+                                <p>Email address</p>
+                                <input type="email" id="input" name="email"><button type="submit" class="btn-button">Update</button>
+                            </div>
+
+
+                            <div>
+                                <p>Change Password</p>
+                                <input type="password" id="input" name="email">
+                            </div>
+
+                            <div>
+                                <p>New Password</p>
+                                <input type="password" id="input" name="email">
+                            </div>
+
+                            <div>
+                                <p>Comfirm Password</p>
+                                <input type="password" id="input" name="email"><button type="submit" class="btn-button">Update</button>
+                            </div>
+                            <br>
+                            <hr>
+
+
+                        </form>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="notification">
+                        <h3>
+                            Notification
+
+                        </h3>
+
+                        <div>
+                            <button type="submit" class="btn-btnn">Discard Changes</button>
+                            <button type="submit" class="btn-btn">Save Changes</button>
+                        </div>
+
+                        
+                    </div>
+
+
+
+                    
+                </div>
+                
+
+         
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="settings">
+                <h3>Settings</h3>
+
+                
+
+            </div>
+
+             
+            <div class="image">
+                <img src="img/Group 54.png">
+           </div>
+
+           
+
+           <div class="left-div">
+
+              <div class="divdiv">
+                    <a href="">
+                        <i class="fa fa-user"></i>Profile
+                    </a>
+                    <h5>Edit Profile</h5>
+                    <hr>
+
+                   
+                    <a href="">
+                        <i class="fa fa-user"></i>Account Settings
+                    </a>
+                    <h5>Personal Informations</h5>
+                    <hr>
+
+
+                
+                    <a href="">
+                        <i class="fa fa-secure"></i>Security
+                    </a>
+                    <h5>Change Email, Change Password</h5>
+                    <hr>
+
+                    <a href="">
+                        <i class="fa fa-"></i>App Update
+                    </a>
+                    <hr>
+                    
+
+                    <a href="">
+                        <i class="fa fa-star"></i>Ratings
+                    </a>
+                    
+
+                    
+               </div>
+               
+            
+
+           </div> 
+           
+
+         
+        </div>
+
+
+        
+            
+     
+            
+     
+
+           
+
+    </body>
+</html>

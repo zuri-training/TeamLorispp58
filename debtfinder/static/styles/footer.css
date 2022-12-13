@@ -1,0 +1,153 @@
+/* web footer starts */
+
+
+.web-footer {
+
+    height: 70vh;
+    background-color: #210440;
+}
+
+.newsletter {
+    text-align: center;
+
+}
+
+.newsletter h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 2rem;
+
+}
+
+/* form input */
+
+input[type=text] {
+    background-color: #210440;
+    border: 1px solid #ffffff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none !important;
+    padding: 0.5rem 4rem;
+    color: #B5ABBF;
+
+
+}
+
+
+
+
+
+input[type="submit"] {
+
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #B5ABBF;
+    border: 1px solid #B5ABBF;
+    padding: 0.5rem 4rem;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+input[type="submit"]:hover {
+    opacity: 0.8;
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.coloum {
+    margin: 60px;
+    cursor: pointer;
+}
+
+.coloum h3 {
+    padding-bottom: 13px;
+    text-align: left;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+
+.footer-link {
+    padding-top: 2px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 400;
+    color: #B5ABBF;
+    text-decoration: none;
+
+
+}
+
+.footer-link:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 8px;
+}
+
+
+.social-icons {
+    display: flex;
+
+}
+
+.social-icons .icon {
+    text-decoration: none;
+    font-size: 24px;
+    color: #B5ABBF;
+    margin: 5px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.social-icons .icon:hover {
+    color: #dbd7de;
+}
+
+/* terms and condition/privacy */
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    gap: -20px;
+}
+
+.copyright p {
+    color: #ffffff80;
+}
+
+.copyright-link {
+    display: flex;
+    gap: 20px;
+    text-decoration: none;
+    color: #B5ABBF;
+    margin-right: 2rem;
+
+}
+
+
+
+.copyright-link a {
+    text-decoration: none;
+    color: #B5ABBF;
+    text-underline-offset: 8px;
+}
+
+.copyright-link a:hover {
+    color: #dbd7de;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+
+/* web footer ends here */

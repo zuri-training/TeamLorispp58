@@ -12,7 +12,7 @@ class Discussion(models.Model):
     topics = models.ManyToManyField("Topic")
 
 class Comment(models.Model):
-    comment_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Comment By")
+    comment_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.DO_NOTHING, verbose_name="Comment By")
     body = models.TextField()
     created_on = models.TimeField(auto_now=True)
     updated_on = models.TimeField(auto_now=True)

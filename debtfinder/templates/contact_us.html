@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Contact us</title>
+  
+  
+
+  <!-- 
+    - favicon
+  -->
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Poppins:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
+
+
+
+</head>
+
+<body>
+
+  <header>
+  <nav class="navbar">
+    <div class="brand__logo">
+      <a href="{% url 'homepage' %}"
+        ><img
+          src="{% static 'img/landimg/logo.svg' %}"
+          id="logo"
+          alt="brand-logo"
+      /></a>
+    </div>
+
+    <ul class="nav__links">
+      <li>
+        <a href="{% url 'homepage' %}">Home</a>
+      </li>
+
+      <li>
+        <a href="{% url 'aboutUs' %}">About Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'contactUs' %}">Contact Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'fAQ' %}">FAQs</a>
+      </li>
+    </ul>
+
+    {% if request.user.is_authenticated %}
+    <div>
+      <a href="{% url 'logout' %}" id="header-btn-a">Log Out </a>
+    </div>
+
+    {% else %}
+
+    <div>
+      <a href="{% url 'login' %}" id="header-btn-a">Log In </a>
+      <a href="{% url 'createAccount' %}" id="header-btn-b">Register </a>
+    </div>
+    {% endif %}
+  </nav>
+</header>
+
+
+  <main>
+    <div class="contact">
+        <form action="">
+            <h2 class="headline-sm" id="contact-label">Get In Touch</h2>
+            <div>
+            <label for="name" class="label">School Name:</label><br>
+            <input type="text" name="name" id="name" placeholder="Name" required class="input-field"><br>
+    
+                 
+                 <label for="email" class="label">Your Email: </label><br>
+                 <input type="email" name="email" id="email" placeholder="Email *" required class="input-field"><br>
+              
+
+             <label for="subject" class="label">Subject:</label><br>
+             <input type="text" name="subject" id="subject" placeholder="Subject *" class="input-field"><br>
+        
+
+             <label for="website" class="label">Website:</label><br>
+            <input type="text" name="website" id="website" placeholder="Website *" class="input-field"><br><br>
+           
+
+            <textarea name="message" id="message" placeholder="Your message *" required class="input-field" rows="6"></textarea><br>
+
+        <button class="btn4">Submit</button>
+        </form>
+    </div>
+  </main>
+
+  <footer class="web-footer">
+
+            <!--newsletter-->
+
+            <div class="newsletter">
+
+
+                <form action="/action_page.php">
+                    <h2>Subscribe to our free newsletter</h2>
+
+                    <input type="text" placeholder="Enter your email" name="Enter your email" required><input type="submit" value="Subscribe">
+                </form>
+
+
+                <!--newsletter ends-->
+
+                <!--footer-->
+
+                <div class="row">
+                    <div class="coloum">
+                        <h3>Debt Finder</h3>
+
+                        <a href="{% url 'aboutUs' %}" class="footer-link">About Us</a>
+                        <a href="" class="footer-link">What We Offer</a>
+                        <a href="{% url 'createAccount' %}" class="footer-link">Register</a>
+                        <a href="{% url 'fAQ' %}" class="footer-link">FAQs</a>
+
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Our Services</h3>
+
+                        <a href="#" class="footer-link">Debtor Listing</a>
+                        <a href="#" class="footer-link">Reciept Management</a>
+                        <a href="#" class="footer-link">Admin Collaboration</a>
+
+                    </div>
+
+
+                    <div class="coloum">
+                        <h3>Contact Us</h3>
+
+                        <!--footer icons-->
+
+                        <div class="social-icons">
+                            <a href="#" title="facebook" class="icon">
+                                <i class="fa fa-facebook-f"></i>
+                            </a>
+
+                            <a href="#" title="twitter" class="icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            <a href="#" title="web" class="icon">
+                                <i class="fa fa-globe"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="copyright">
+                    <div>
+                    <p>Copyright@2022 Debt Finder. All rights reserved</p>
+                    </div>
+                    
+                    
+                
+
+                    <div class="copyright-link">
+                    <a href="#">Terms & Condition</a>
+            
+
+                   
+                    <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <!--footer ends-->
+
+
+            </div>
+
+
+        </footer>

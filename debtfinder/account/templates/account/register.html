@@ -1,9 +1,36 @@
-{% extends 'base.html' %}
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<link href="{% static 'styles/schoolreg.css' %}" rel="stylesheet" type="text/css" media="screen">
+<title>Parent Registration</title>
+{% endblock title %}
 
 {% block content %}
-<form action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Create Account">
+
+<section>
+  <p>As you're registering as a parent, make sure the Parent box is ticked</p>
+{% for message in messages %}
+  {{message}}
+  {% endfor %}
+
+  <form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  
+   <div >
+    {% for fields in parent %}
+     <div class="input-box">{{fields.label_tag}}{{fields}}</div>
+    {% endfor %}
+            {% for fields in form %}
+            <div class="input-box">{{fields.label_tag}}{{fields}}</div>
+            {% endfor %}
+
+          </div>
+          {{error}}
+</div>
+
+  <input type="submit" value="Create Account" />
 </form>
+</section>
+
 {% endblock content %}

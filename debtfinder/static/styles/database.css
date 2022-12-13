@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    
+}
+
+/* web logo */
+.brand-logo{
+    text-align: center;
+    margin-top: 1.5rem;
+    height: 67px;
+}
+
+#logo{
+    
+    height: 41px;
+}
+
+
+
+
+/* sidenav begins here */
+
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #210440;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+.sidenav a{
+    /* padding: 6px 8px 6px 16px; */
+    padding:10px 8px 6px 3rem;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+}
+  
+.sidenav a:hover{
+    background-color: #F0F0F0;
+    color: #242424;
+}
+
+
+.bottom-nav{
+    margin-top: 8rem ;
+}
+  
+
+
+
+
+input[type=text] {
+    background-color: #e8e6e650;
+    border-radius: 10px;
+    padding: 0.3rem 18rem;
+    font-size: 18px;
+    
+}
+  
+.search-container{
+    
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+  
+.search-container button:hover {
+    /* background: #ccc; */
+}
+  
+
+.search-container {
+      /* float: none; */
+}
+
+
+input[type=text] {
+      border: 1px solid #ccc;  
+}
+
+.btn{
+  
+    margin-left: 16rem ;
+}
+
+.pending{
+    padding: 0.3rem 1rem;
+    background-color: #ffffff;
+    border: 2px solid #210440;
+    color: #210440;
+    border-radius: 6px;
+}
+
+.pending:hover{
+    background-color: #2a094db1;
+    border: 2px solid #2a094db1;
+    color: #ffffff;
+}
+
+.completed{
+    padding: 0.4rem 1rem;
+    background-color: #210440;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.completed:hover{
+    background-color: #2a094db1;
+    border: 2px solid #2a094db1;
+    color: #ffffff;
+}
+
+.btn1{
+    float: right;
+   
+}
+
+.filter{
+    color: #242424;
+    background-color: #ffffff;
+    border: 2px solid #210440;
+    border-radius: 6px;
+    padding: 0.3rem 1rem;
+    margin-right: 6rem;
+}
+
+.div-container{
+   
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #F6DCD9;
+    margin-left: 16rem;
+    width: 60%;
+    padding: 0.4rem 4rem;
+    border-radius: 8px;
+  
+}
+
+.div-link a{
+    text-align: center;
+    padding-right: 2rem;
+    font-size: 14px;
+    text-decoration: none;
+    color: #242424;
+}
+
+
+
+
+
+.divcontainer{
+   
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    border: 1px solid #210440;
+    margin-left: 16rem;
+    width: 60%;
+    padding: 0.4rem 4rem;
+    border-radius: 8px;
+  
+}
+
+.div-link .failed{
+    color: #ffffff;
+    background-color: #D30A0A;
+    border-radius: 9px;
+    padding: 0.1rem 1rem;
+}
+
+.div-link .successful{
+    color: #242424;
+    background-color: #29E909;
+    border-radius: none;
+    padding: 0.1rem 1rem;
+}
+
+.section{
+   margin-top: 4rem;
+   
+}
+
+.section h3{
+
+  margin-left: 16rem;
+  margin-bottom: 1rem;
+
+
+}
+
+.div-links a{
+    text-align: center;
+    padding-right: 2rem;
+    font-size: 14px;
+    text-decoration: none;
+    color: #242424;
+}
+
+.div_container{
+
+    
+
+    margin-bottom: 1rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    border: 1px solid #E5958E;
+    margin-left: 16rem;
+    width: 75%;
+    padding: 0.4rem 4rem;
+
+
+}
+
+
+
+.div-container-s{
+    
+    margin-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F6DCD9;
+    margin-left: 16rem;
+    width: 75%;
+    border: 1px solid #1C0435;
+    padding: 0.4rem 4rem;
+   
+}
+
+.div-container-s .div-links{
+    text-align: center;
+}
+
+.view{
+    padding: 0.1rem 0.1rem;
+   
+}
