@@ -76,8 +76,6 @@ def schoolRegView(request):
                     CAC_Reg_number=request.POST['CAC_Reg_number'],
                 )
                 return redirect("schoolProfile")
-    else:
-        messages.error(request, "An error has occurred. Try again")
     context = {
         "form": reg,
         "school": school
@@ -119,26 +117,3 @@ def logoutView(request):
         messages.info(request, "You're not signed in")
         return redirect("homepage") 
 
-@login_required
-def schoolProfile(request):
-    return render(request, "account/schoolProfile.html")
-
-
-
-
-@login_required
-def database(request):
-    debtors = Debtor.objects.all()
-    context = {
-        "debtors": debtors
-    }
-
-    return render(request, "", context)
-
-@login_required
-def debtorView(request, pk):
-    debtorView = Debtor.objects.get(id=pk)
-    context = {
-        "debtor": debtorView
-    }
-    return render(request, "", context)

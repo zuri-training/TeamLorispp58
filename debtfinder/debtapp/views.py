@@ -31,16 +31,19 @@ def contactUs(request):
             }
             message = "\n".join(body.values())
             try:
-                send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
+                send_mail(subject, message, 'admin@example.com',
+                          ['admin@example.com'])
             except BadHeaderError:
                 messages.error(request, 'Invalid header found.')
-            return redirect ("homepage")
+            return redirect("homepage")
     return render(request, "contact_us.html")
+
 
 def fAQ(request):
     return render(request, "faq.html")
 
-@login_required
+
+@login_required()
 def schools(request):
     schoolList = School.objects.all()
     context = {
@@ -48,7 +51,8 @@ def schools(request):
     }
     return render(request, "listOfSchools.html", context)
 
-@login_required
+
+@login_required()
 def school(request, pk):
     schoolView = School.objects.get(id=pk)
     context = {
@@ -56,7 +60,8 @@ def school(request, pk):
     }
     return render(request, "schoolProfilepage.html", context)
 
-@login_required
+
+@login_required()
 def discussions(request):
     discuss = Discussion.objects.all()
     context = {
@@ -64,7 +69,8 @@ def discussions(request):
     }
     return render(request, "", context)
 
-@login_required
+
+@login_required()
 def discussView(request, pk):
     discussObj = Discussion.objects.get(id=pk)
     context = {
@@ -74,7 +80,8 @@ def discussView(request, pk):
 
 # create a new discuss
 
-@login_required
+
+@login_required()
 def createDiscuss(request):
     form = DiscussionForm()
 
@@ -88,7 +95,8 @@ def createDiscuss(request):
 
 # update a discuss
 
-@login_required
+
+@login_required()
 def updateDiscuss(request, pk):
     discussObj = Discussion.objects.get(id=pk)
     form = DiscussionForm(instance=discussObj)
@@ -101,7 +109,8 @@ def updateDiscuss(request, pk):
     context = {"form": form}
     return render(request, "", context)
 
-@login_required
+
+@login_required()
 def deleteDiscuss(request, pk):
     discussObj = Discussion.objects.get(id=pk)
     if request.method == "POST":
@@ -110,10 +119,11 @@ def deleteDiscuss(request, pk):
     context = {"object": discussObj}
     return render(request, "", context)
 
-@login_required
+
+@login_required()
 def createComment(request):
     form = CommentForm()
-    if request.method =="POST":
+    if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
             form.save()
@@ -123,7 +133,8 @@ def createComment(request):
     }
     return render(request, "", context)
 
-@login_required
+
+@login_required()
 def updateComment(request, pk):
     commentObj = Comment.objects.get(pk=id)
     form = CommentForm(instance=commentObj)
@@ -132,13 +143,13 @@ def updateComment(request, pk):
         if form.is_valid():
             form.save()
             return redirect("discuss")
-    context={
-        "form":form
+    context = {
+        "form": form
     }
     return render(request, "", context)
 
 
-@login_required
+@login_required()
 def deleteComment(request, pk):
     commentObj = Comment.objects.get(id=pk)
     if request.method == "POST":
@@ -151,10 +162,25 @@ def deleteComment(request, pk):
     return render(request, "", context)
 
 
-@login_required
+@login_required()
+def database(request):
+    debtors = Debtor.objects.all()
+    context = {
+        "debtors": debtors
+    }
 
-        
-@login_required
+    return render(request, "", context)
+
+@login_required()
+def debtorView(request, pk):
+    debtorView = Debtor.objects.get(id=pk)
+    context = {
+        "debtor": debtorView
+    }
+    return render(request, "", context)
+
+
+@login_required()
 def addDebtor(request):
     form = DebtorForm()
     if request.user.isParent == True:
@@ -168,12 +194,43 @@ def addDebtor(request):
         else:
             messages.error(request, "An error has occurred")
     context = {
-        "form":form
+        "form": form
     }
     return render(request, "", context)
 
 
+@login_required()
+def deleteDebtor(request):
+    if request.user.isParent == True:
+        messages.info(
+            request, "You cannot access this page. You can only contend. If contention is passed, request the school to delete it")
+        return redirect("debtor")
+    elif request.user.isSchool == True:
+        if form.is_valid():
+            form.delete()
+            return redirect(debtor)
+    context = {
+        "form": form
+    }
+    return render(request, "", context)
 
-@login_required
+@login_required()
+def contention(request):
+    form = ContentionForm()
+    if request.method == "POST":
+        form = ContentionForm(request.POST)
+        if form.is_valid():
+            req = form.save(commit=False)
+            if user.request.isParent == True:
+                req.save()
+                return redirect("debtor")
+        else:
+            messages.error(request, "Sorry, an error occurred")
+    context = {
+        "form": form
+    }
+    return render(request, "", context)
+
+@login_required()
 def setting(request):
     return render(request, "settings.html")
