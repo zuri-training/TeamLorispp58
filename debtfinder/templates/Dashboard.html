@@ -4,7 +4,164 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../static/styles/Dashboard.css" />
     <title>Dashboard</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div class="row">
+        <div class="left">
+          <section class="sidebar">
+            <div class="logo-section">
+              <img
+                class="logo"
+                src="../static/img/_Logo  (5) 2.svg"
+                alt="logo"
+              />
+              <h1 class="logo-text">Dept Finder</h1>
+            </div>
+            <div class="items">
+              <div>
+                <a href="" class="item"
+                  ><img src="../static/img/home.svg" alt="home" class="icons" />
+                  Home</a
+                >
+              </div>
+              <div>
+                <a href="" class="item">
+                  <img src="../static/img/user.svg" alt="" class="icons" />
+                  Profile</a
+                >
+              </div>
+              <div>
+                <a href="" class="item"
+                  ><img
+                    src="../static/img/Vector (2).svg"
+                    alt=""
+                    class="icons"
+                  />
+                  Debtor Database</a
+                >
+              </div>
+              <div>
+                <a href="" class="item"
+                  ><img
+                    src="../static/img/teacher.svg"
+                    alt=""
+                    class="icons"
+                  />Schools</a
+                >
+              </div>
+              <div>
+                <a href="" class="item">
+                  <img
+                    src="../static/img/Vector (3).svg"
+                    alt=""
+                    class="icons"
+                  />Add New Deptor</a
+                >
+              </div>
+              <div>
+                <a href="" class="item">
+                  <img
+                    src="../static/img/Vector (1).svg"
+                    alt=""
+                    class="icons"
+                  />Student Checker</a
+                >
+              </div>
+            </div>
+            <div class="item-2">
+              <div>
+                <a href="" class="item"
+                  ><img
+                    src="../static/img/setting-2.svg"
+                    alt=""
+                    class="icons"
+                  />
+                  Settings</a
+                >
+              </div>
+              <div class="item">
+                <a href=""
+                  ><img
+                    src="../static/img/help-circle.svg"
+                    alt=""
+                    class="icons"
+                  />
+                  Help & Support</a
+                >
+              </div>
+              <div class="item">
+                <a href=""
+                  ><img src="../static/img/logout.svg" alt="" class="icons" />
+                  Log Out</a
+                >
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="right">
+          <section>
+            <form action="" class="search">
+              <button class="search-btn">
+                <i class="fa fa-light fa fa-magnifying-glass"></i>
+              </button>
+              <input type="search" placeholder="search" class="search-input" />
+            </form>
+            <h1>Add a new deptor</h1>
+            <form action="">
+              <div class="form-control">
+                <label for="full-name">Full Name</label>
+                <input type="text" class="form-input" />
+              </div>
+              <div class="form-control">
+                <label for="student-id">Student ID</label>
+                <input type="text" class="form-input" />
+              </div>
+              <div class="form-control">
+                <label for="amount">Amount</label>
+                <input type="text" class="form-input" />
+              </div>
+              <div class="form-control">
+                <label for="gender">Gender</label>
+                <input type="text" class="form-input" />
+              </div>
+              <div class="form-control">
+                <label for="parent-guardian">Parent/Guardian</label>
+                <input type="text" class="form-input" />
+              </div>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" class="form-input" />
+              </div>
+              <div class="form-control">
+                <label for="phone-number">Phone Number</label>
+                <input type="text" class="form-input" />
+              </div>
+              <div class="form-control">
+                <label for="description">Description</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </div>
+              <button class="btn">Add Deptor</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

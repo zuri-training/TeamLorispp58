@@ -38,8 +38,8 @@ body {
   text-decoration: none;
   display: block;
   color: #ffffff;
-  width: 500px;
-  size: 14px;
+  font-weight: 500px;
+  font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.1px;
   font-style: none;
@@ -47,6 +47,7 @@ body {
 
 .sidebar a:hover {
   background: #f0f0f0;
+  width: 25%;
 }
 
 .logo {
