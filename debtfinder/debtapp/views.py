@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
 from account.models import *
+from django.db.models import Q
 from account.forms import DebtorForm, ContentionForm
 from django.contrib import messages
 from .forms import DiscussionForm, CommentForm, ContactForm
@@ -38,6 +39,14 @@ def contactUs(request):
             return redirect("homepage")
     return render(request, "contact_us.html")
 
+def welcome_mail(request):
+    subject = '🎉 Welcome to Debtfinder'
+    recipient_list = [user.email,]
+    email_from = settings.EMAIL_HOST_USER
+    content = f'Hi {user}. Thank you for signing up on Debtfinder. We promise to help you recover your debts easily and promptly.😀'
+
+    send_mail(subject, content, email_from, recipient_list)
+
 
 def fAQ(request):
     return render(request, "faq.html")
@@ -45,9 +54,14 @@ def fAQ(request):
 
 @login_required()
 def schools(request):
-    schoolList = School.objects.all()
+    search_query = ''
+    if request.GET.get('search_query'):
+        search_query = request.GET.get('search_query')
+    
+    schoolList = School.objects.filter(Q(school_name__icontains=search_query))
     context = {
-        "schoolList": schoolList
+        "schoolList": schoolList,
+        "search_query":search_query
     }
     return render(request, "listOfSchools.html", context)
 
@@ -164,7 +178,10 @@ def deleteComment(request, pk):
 
 @login_required()
 def database(request):
-    debtors = Debtor.objects.all()
+    search_query = ''
+    if request.GET.get('search_query'):
+        search_query = request.GET.get('search_query')
+    debtors = Debtor.objects.filter(Q(first_name__icontains=search_query), Q(last_name__icontains=search_query))
     context = {
         "debtors": debtors
     }

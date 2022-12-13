@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from debtapp.views import welcome_mail
 from .models import *
 from .forms import *
 
@@ -30,6 +31,7 @@ def registerView(request):
             elif user.isParent == False:
                 messages.error(request, "You have to tick As a Parent")
             elif user.isParent == True:
+                welcome_mail(user)
                 user.save()
                 messages.success(request, "You're now been redirected to verify your account")
                 Parent.objects.create(
@@ -69,6 +71,7 @@ def schoolRegView(request):
             elif user.isSchool == False:
                 messages.error(request, "You can't continue without choosing School")
             elif user.isSchool == True:
+                welcome_mail(user)
                 user.save()
                 School.objects.create(
                     school=user,
