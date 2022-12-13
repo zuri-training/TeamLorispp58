@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import *
+from account.models import *
+from account.forms import DebtorForm, ContentionForm
 from django.contrib import messages
 from .forms import DiscussionForm, CommentForm, ContactForm
 from django.core.mail import send_mail, BadHeaderError
@@ -32,11 +34,27 @@ def contactUs(request):
                 send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
             except BadHeaderError:
                 messages.error(request, 'Invalid header found.')
-            return redirect ("main:homepage")
+            return redirect ("homepage")
     return render(request, "contact_us.html")
 
 def fAQ(request):
     return render(request, "faq.html")
+
+@login_required
+def schools(request):
+    schoolList = School.objects.all()
+    context = {
+        "schoolList": schoolList
+    }
+    return render(request, "listOfSchools.html", context)
+
+@login_required
+def school(request, pk):
+    schoolView = School.objects.get(id=pk)
+    context = {
+        "schoolView": schoolView
+    }
+    return render(request, "schoolProfilepage.html", context)
 
 @login_required
 def discussions(request):
@@ -91,3 +109,71 @@ def deleteDiscuss(request, pk):
         return redirect("disccuss")
     context = {"object": discussObj}
     return render(request, "", context)
+
+@login_required
+def createComment(request):
+    form = CommentForm()
+    if request.method =="POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("discuss")
+    context = {
+        "form": form
+    }
+    return render(request, "", context)
+
+@login_required
+def updateComment(request, pk):
+    commentObj = Comment.objects.get(pk=id)
+    form = CommentForm(instance=commentObj)
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=commentObj)
+        if form.is_valid():
+            form.save()
+            return redirect("discuss")
+    context={
+        "form":form
+    }
+    return render(request, "", context)
+
+
+@login_required
+def deleteComment(request, pk):
+    commentObj = Comment.objects.get(id=pk)
+    if request.method == "POST":
+        commentObj.delete()
+        messages.success(request, "Comment deleted successfully")
+        return redirect("discuss")
+    context = {
+        "object": commentObj
+    }
+    return render(request, "", context)
+
+
+@login_required
+
+        
+@login_required
+def addDebtor(request):
+    form = DebtorForm()
+    if request.user.isParent == True:
+        messages.error(request, "You can't access this page")
+    elif request.user.isSchool == True:
+        if request.method == "POST":
+            if form.is_valid():
+                form.save()
+                messages.success(request, "You've succefully added a debtor")
+                return render("debtor")
+        else:
+            messages.error(request, "An error has occurred")
+    context = {
+        "form":form
+    }
+    return render(request, "", context)
+
+
+
+@login_required
+def setting(request):
+    return render(request, "settings.html")

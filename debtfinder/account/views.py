@@ -123,21 +123,9 @@ def logoutView(request):
 def schoolProfile(request):
     return render(request, "account/schoolProfile.html")
 
-@login_required
-def schools(request):
-    schoolList = School.objects.all()
-    context = {
-        "schoolList": schoolList
-    }
-    return render(request, "", context)
 
-@login_required
-def school_view(request, pk):
-    schoolView = School.objects.get(id=pk)
-    context = {
-        "schoolView": schoolView
-    }
-    return render(request, "", context)
+
+
 @login_required
 def database(request):
     debtors = Debtor.objects.all()
