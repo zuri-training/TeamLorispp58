@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<link href="{% static 'styles/login.css' %}" rel="stylesheet" type="text/css" media="screen">
+        <title>Logout</title>
+{% endblock title %}
+
+{% block content %}
+<section>
+<div class="form-wrapper">
+<h3>LOGOUT</h3>
+
+<form action="" method="POST" class="form">
+    {% csrf_token %}
+{% for message in messages  %}
+<div class="message">{{message}}</div>
+{% endfor %}
+
+    
+    <input type="submit" value="Log out" class="btn">
+
+</form>
+ 
+
+</section>
+
+
+{% endblock content %}

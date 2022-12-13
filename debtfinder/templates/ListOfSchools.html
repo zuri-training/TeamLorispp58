@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../static/styles/ListOfSchool.css" />
+    <link rel="stylesheet" href="{% static 'styles/ListOfSchool.css' %}" />
     <title>List Of School</title>
   </head>
   <body>
@@ -37,7 +38,7 @@
             </div>
             <div class="items">
               <div class="item">
-                <a href=""
+                <a href="{% url 'homepage' %}"
                   ><img src="../static/img/home.svg" alt="home" /> Home</a
                 >
               </div>
@@ -77,13 +78,13 @@
                 >
               </div>
               <div class="item">
-                <a href=""
+                <a href="{% url 'contactUs' %}"
                   ><img src="../static/img/help-circle.svg" alt="" /> Help &
                   Support</a
                 >
               </div>
               <div class="item">
-                <a href=""
+                <a href="{% url 'logout' %}"
                   ><img src="../static/img/logout.svg" alt="" /> Log Out</a
                 >
               </div>
@@ -107,61 +108,15 @@
                 </tr>
               </thead>
               <tbody>
+                {% for school in schoolList %}
                 <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
+                  <td>{{school.school_name}}</td>
+                  <td>{{school.school_address}}</td>
+                  <td class="view"><a href="{% url 'school' school.id %}">view</a></td>
                 </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td>view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
-                <tr>
-                  <td>Paulson College</td>
-                  <td>lagos Island</td>
-                  <td class="view">view</td>
-                </tr>
+                
+            {% endfor %}
+          
               </tbody>
             </table>
           </section>

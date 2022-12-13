@@ -1,14 +1,37 @@
-{% extends 'base.html' %}
+{% extends 'index.html' %} {% load static %} {% block title %}
+<link
+  href="{% static 'styles/create.css' %}"
+  rel="stylesheet"
+  type="text/css"
+  media="screen"
+/>
+<title>Create Account</title>
+{% endblock title %} {% block content %}
+<section>
+  <h3>Register</h3>
+  <div class="register">
+    <div class="wrapper">
+    <div class="inner-wrapper">
+      <img src="{% static 'img/regicon.png' %}" alt="" class="regicon"/>
+      <a href="{% url 'schoolRegView' %}" class="btn">
+        As a School
+      </a>
+    </div>
 
-{% block content %}
-<a href="{% url 'register' %}">
-    <div><h3>
-        Register as a parent
-    </h3></div>
-</a>
-<a href="{% url 'schoolRegView' %}">
-    <div><h3>
-        Register as a School owner
-    </h3></div>
-</a>
+    <div class="inner-wrapper">
+      <img src="{% static 'img/regicon.png' %}" alt="" class="regicon"/>
+      <a href="{% url 'register' %}" class="btn">
+        As a parent
+      </a>
+    </div>
+    
+  </div>
+  <div>
+    Do you have an account? <a href="{% url 'login' %}">Log in here</a>
+  </div>
+  </div>
+  
+  
+</section>
+
 {% endblock content %}

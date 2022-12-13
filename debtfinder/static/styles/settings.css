@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    
+}
+
+/* web logo */
+.brand-logo{
+    text-align: center;
+    margin-top: 1.5rem;
+    height: 67px;
+}
+
+#logo{
+    
+    height: 41px;
+}
+
+
+
+
+/* sidenav begins here */
+
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #210440;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+  
+.sidenav a{
+    /* padding: 6px 8px 6px 16px; */
+    padding:10px 8px 6px 3rem;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+}
+  
+.sidenav a:hover{
+    background-color: #F0F0F0;
+    color: #242424;
+}
+
+
+.bottom-nav{
+    margin-top: 8rem ;
+}
+  
+
+
+
+
+input[type=text] {
+    background-color: #e8e6e650;
+    border-radius: 10px;
+    padding: 0.3rem 18rem;
+    font-size: 18px;
+    
+}
+  
+.search-container{
+    background-position: 5px 5px;
+    margin-left: 90px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.image{
+    margin-left: 16rem;
+    margin-top: 3rem;
+    width: 20%;
+}
+
+
+
+
+input[type=text] {
+    border: 1px solid #ccc;  
+}
+
+.settings{
+
+  margin-left: 16rem ;
+}
+
+
+.left-div{
+    margin-top: 3rem;
+    margin-left: 16rem;
+    width: 30%;
+}
+
+.divdiv a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #959595;
+}
+
+h5{
+    color: #959595; 
+}
+
+.divdiv a:hover{
+    color: #210440;
+}
+
+
+h5:hover{
+   color: black;
+}
+
+
+.right-div {
+   
+    width:40%;
+    float: right;
+}
+
+.class{
+    float: right;
+}
+
+
+.contain {
+    width: 80%;
+    right: 10rem;
+}
+
+
+
+h3{
+    margin: 2rem  0 2rem 0;
+}
+
+.btn-button{
+    padding: 0.4rem 1rem;
+    margin-left: 1rem;
+    background-color: transparent;
+    border: 1px solid #210440;
+    border-radius: 9px;
+    color: #210440;
+}
+
+.btn-button:hover{
+    background-color: #210440;
+    color: #ffffff;
+}
+
+.btn-btnn{
+    padding: 0.5rem 1rem;
+    margin-right: 6rem;
+    background-color: transparent;
+    border: 1px solid #210440;
+    border-radius: 9px;
+    color: #210440;
+}
+
+
+
+.notification{
+    margin-bottom: 2rem;
+}
+
+.btn-btn{
+    background-color: #210440;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: 1px solid #210440;
+    border-radius: 9px;
+}
+
+.btn-btn:hover{
+    background-color: #320d5a7a;
+   
+    border-radius: 9px;
+    color: #210440;
+}
+
+
+p{
+    font-size: 14px;
+}
+input{
+    padding: 0.4rem 1rem;
+    border: 1px solid #210440;
+    border-radius: 4px;
+}

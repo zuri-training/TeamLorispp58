@@ -1,0 +1,45 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/header.css' %}" />
+<header>
+  <nav class="navbar">
+    <div class="brand__logo">
+      <a href="{% url 'homepage' %}"
+        ><img
+          src="{% static 'img/landimg/logo.svg' %}"
+          id="logo"
+          alt="brand-logo"
+      /></a>
+    </div>
+
+    <ul class="nav__links">
+      <li>
+        <a href="{% url 'homepage' %}">Home</a>
+      </li>
+
+      <li>
+        <a href="{% url 'aboutUs' %}">About Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'contactUs' %}">Contact Us</a>
+      </li>
+
+      <li>
+        <a href="{% url 'fAQ' %}">FAQs</a>
+      </li>
+    </ul>
+
+    {% if request.user.is_authenticated %}
+    <div>
+      <a href="{% url 'logout' %}" id="header-btn-a">Log Out </a>
+    </div>
+
+    {% else %}
+
+    <div>
+      <a href="{% url 'login' %}" id="header-btn-a">Log In </a>
+      <a href="{% url 'createAccount' %}" id="header-btn-b">Register </a>
+    </div>
+    {% endif %}
+  </nav>
+</header>
