@@ -38,6 +38,8 @@ class CustomUser(AbstractUser):
 class School(models.Model):
     school = models.OneToOneField(settings.AUTH_USER_MODEL, limit_choices_to={
                                   'isSchool': True}, on_delete=models.CASCADE)
+    id = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     school_name = models.CharField(max_length=250)
     CAC_Reg_number = models.CharField(max_length=10)
     school_address = models.CharField(max_length=250)
@@ -49,8 +51,7 @@ class School(models.Model):
     district_code = models.CharField(max_length=5)
     local_govt_area = models.CharField(max_length=100)
     state = models.CharField(max_length=50)
-    unique_number = models.UUIDField(
-        default=uuid.uuid4, editable=False, unique=True, primary_key=True)
+ 
 
     def __str__(self):
         return f"{self.school_name}"

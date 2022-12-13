@@ -12,5 +12,10 @@ urlpatterns = [
     path("create_discussion/", createDiscuss, name="createDiscuss"),
     path("update_discussion/", updateDiscuss, name="updateDiscuss"),
     path("delete_discussion/", deleteDiscuss, name="deleteDiscuss"),
+
+    path("schools", schools, name="schools"),
+    path("school/<str:pk>/", school, name="school"),
+    path("settings", setting, name="setting")
+
     
 ]
