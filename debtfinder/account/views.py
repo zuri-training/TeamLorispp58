@@ -78,7 +78,7 @@ def schoolRegView(request):
                     school_name=request.POST.get('school_name'),
                     CAC_Reg_number=request.POST['CAC_Reg_number'],
                 )
-                return redirect("schoolProfile")
+                return redirect("Profile")
     context = {
         "form": reg,
         "school": school
@@ -120,3 +120,13 @@ def logoutView(request):
         messages.info(request, "You're not signed in")
         return redirect("homepage") 
 
+@login_required(login_url='login')
+def profile(request, pk):
+    schoolprofile = School.objects.get(id=pk)
+    school = School.school
+    context = {
+        "profile": schoolprofile,
+        "school": school
+    }
+    return render(request, "account/profile.html", context)
+    
