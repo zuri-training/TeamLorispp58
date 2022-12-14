@@ -46,6 +46,7 @@ body {
 }
 
 .sidebar a:hover {
+  background: #f0f0f0;
   width: 25%;
   background: #6008bf;
 }
