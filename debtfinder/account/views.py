@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from debtapp.views import welcome_mail
 from .models import *
 from .forms import *
 
@@ -30,6 +31,7 @@ def registerView(request):
             elif user.isParent == False:
                 messages.error(request, "You have to tick As a Parent")
             elif user.isParent == True:
+                welcome_mail(user)
                 user.save()
                 messages.success(request, "You're now been redirected to verify your account")
                 Parent.objects.create(
@@ -69,6 +71,7 @@ def schoolRegView(request):
             elif user.isSchool == False:
                 messages.error(request, "You can't continue without choosing School")
             elif user.isSchool == True:
+                welcome_mail(user)
                 user.save()
                 School.objects.create(
                     school=user,
@@ -76,8 +79,6 @@ def schoolRegView(request):
                     CAC_Reg_number=request.POST['CAC_Reg_number'],
                 )
                 return redirect("schoolProfile")
-    else:
-        messages.error(request, "An error has occurred. Try again")
     context = {
         "form": reg,
         "school": school
@@ -119,26 +120,3 @@ def logoutView(request):
         messages.info(request, "You're not signed in")
         return redirect("homepage") 
 
-@login_required
-def schoolProfile(request):
-    return render(request, "account/schoolProfile.html")
-
-
-
-
-@login_required
-def database(request):
-    debtors = Debtor.objects.all()
-    context = {
-        "debtors": debtors
-    }
-
-    return render(request, "", context)
-
-@login_required
-def debtorView(request, pk):
-    debtorView = Debtor.objects.get(id=pk)
-    context = {
-        "debtor": debtorView
-    }
-    return render(request, "", context)

@@ -60,6 +60,8 @@ class School(models.Model):
 class Parent(models.Model):
     parent = models.OneToOneField(settings.AUTH_USER_MODEL, limit_choices_to={
                                   'isParent': True}, on_delete=models.CASCADE)
+    id = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     first_name = models.CharField(max_length=250, blank=True, null=True)
     last_name = models.CharField(max_length=250, blank=True, null=True)
     email = models.EmailField(max_length=100)
@@ -92,6 +94,8 @@ class Student(models.Model):
 
 
 class Debtor(models.Model):
+    id = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     posted_by = models.ForeignKey(School, on_delete=models.CASCADE)
     parent_details = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={
                                        'isParent': True}, on_delete=models.CASCADE)
@@ -107,6 +111,8 @@ class Debtor(models.Model):
 
 
 class Contention(models.Model):
+    id = models.UUIDField(
+        default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     parent_contending = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={
                                           'isParent': True}, on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now=True)
