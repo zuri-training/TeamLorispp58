@@ -166,8 +166,9 @@
 
 
         <div class="file">
-            <button class="btn-file" ><i class="fa fa-folder"></i></button>
+            <a href="{% url 'content' %}" class="btn-file" ><i class="fa fa-folder"></i></a>
         </div>
+
 
 
         
@@ -178,6 +179,9 @@
           <h3>Contention  List</h3>
                 
           <div class="div_container">
+
+            
+          
                 <div class="div-links">
                     <a href="">Name of Child</a>
                 </div>
@@ -202,98 +206,36 @@
 
 
 
+            {% if form %}
+           
             <div class="div-container-s">
+                 {% for contend in form %}
                 <div class="div-links">
-                    <a href="">Peace James</a>
+                    <a href="">{{contend.first_name}} {{contend.last_name}}</a>
                 </div>
     
                 <div class="div-links">
-                    <a href="">1563452</a>
+                    <a href="">{{contend.student_id}}</a>
                 </div>
     
                 <div class="div-links">
-                    <a href="">#26,000</a>
+                    <a href="">{{contend.amount_paid}}</a>
                 </div>
     
                 <div class="div-links">
-                    <a href="">12/10/2022</a>
+                    <a href="">{{contend.created_on}}</a>
                 </div>
     
                 <div class="div-links">
                     <button class="view">
-                        <i class="fa fa-file"></i><a href="">View Details</a>
+                        <i class="fa fa-file"></i><a href="">{{contend.proof}}</a>
                     </button>
                 </div>
-    
+     {% endfor %}
             </div>
-
-
-
+             
             
-          <div class="div-container-s">
-                <div class="div-links">
-                    <a href="">Blessing Okpor</a>
-                </div>
-
-                <div class="div-links">
-                    <a href="">2456762</a>
-                </div>
-
-                <div class="div-links">
-                    <a href="">#54,600</a>
-                </div>
-
-                <div class="div-links">
-                    <a href="" class="failed">6/10/2022</a>
-                </div>
-
-                <div class="div-links">
-                  
-                    <button class="view">
-                        <i class="fa fa-file"></i><a href="">View Details</a>
-                    </button>
-                   
-                    
-                </div>
-
-                
-          </div>
-
-
-               
-          <div class="div-container-s">
-                <div class="div-links">
-                    <a href="">Peace James</a>
-                </div>
-
-                <div class="div-links">
-                    <a href="">1563762</a>
-                </div>
-
-                <div class="div-links">
-                    <a href="">#102,500</a>
-                </div>
-
-                <div class="div-links">
-                    <a href="" class="failed">2/10/2022</a>
-                </div>
-
-                <div class="div-links">
-                    <button class="view">
-                        <i class="fa fa-file"></i><a href="">View Details</a>
-                    </button>
-                </div>
-
-
-         </div>
-           <span>
-
-                <div class="view-all">
-                    <button type="submit" class="view_all">View all</button>
-                </div>
-    
-        </div>
-
+            {% endif %}
 
        
 

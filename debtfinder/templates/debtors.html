@@ -21,19 +21,19 @@
             <ul class="nav__links">
 
                 <li>
-                    <a href="">Home</a>
+                    <a href="{% url 'homepage' %}">Home</a>
                 </li>
 
                 <li>
-                    <a href="">About Us</a>
+                    <a href="{% url 'aboutUs' %}">About Us</a>
                 </li>
 
                 <li>
-                    <a href="">Contact Us</a>
+                    <a href="{% url 'contactUs' %}">Contact Us</a>
                 </li>
 
                 <li>
-                    <a href="">FAQs</a>
+                    <a href="{% url 'fAQ' %}">FAQs</a>
                 </li>
 
 
@@ -55,23 +55,25 @@
 <main>
     <div class="main_container">
         <h4> Debtor details</h4>
+        {% if debtors %}
     <div class="details">
+        {% for debtor in debtors %}
         <label for="student name"> Student Name</label><br>
-        <input type="text" placeholder="Adeagbo Ayomide Victor" ></input><br>
+        <input type="text" placeholder="{{debtor.first_name}} {{debtor.last_name}}" ></input><br>
         <label for="student id">Student Unique Identity</label><br>
-        <input type="" placeholder="555-0108/AA"></input><br>
-        <label for="email">Email Address</label><br>
-        <input type="email" placeholder="Adeagbo Ayomide Victor"></input>
+        <input type="" placeholder="{{debtor.student_id}}"></input><br>
+        <label for="debt_type">Debt Type</label><br>
+        <input type="text" placeholder="{{debtor.debt_type}}"></input>
     
     
     </div>
     
     <div class="owned">
        <h4>Debt Owned</h4>
-       <button class="ownedno">#78,500</button>
-       <h5>Discribtion</h5>
-       <p>Velit officia consequat duis velit mollit.  Exercitation veniam consequat sunt nostrud amet,duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet,duis enim velit mollit.Exercitation veniam consequat sunt nostrud amet,duis enim velit mollit.</p>
-     </div>  
+       <button class="ownedno">{{debtor.amount_owned}}</button>
+       {% endfor %}
+     </div>
+     {% endif %}
     <div class="contend">
         
     <button type="submit" class="btn_contend" id="" onclick="togglePopup()" >Contend Debt</button>

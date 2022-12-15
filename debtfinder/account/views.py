@@ -105,7 +105,9 @@ def loginView(request):
 
         if user is not None:
             login(request, user)
-            return redirect("homepage")
+            if user.isSchool == True:
+                return redirect("Profile")
+            return redirect("database")
         messages.info(request, "Account not found. Credentials incorrect")
         redirect("login")
     return render(request, "account/login.html")
@@ -122,9 +124,10 @@ def logoutView(request):
     return
 
 @login_required(login_url='login')
-def profile(request, pk):
-    schoolprofile = School.objects.get(id=pk)
-    school = School.school
+def profile(request, pk = id):
+    if pk:
+        schoolprofile = School.objects.get(id=pk)
+        school = School.school
     context = {
         "profile": schoolprofile,
         "school": school

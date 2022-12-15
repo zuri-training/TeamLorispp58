@@ -118,6 +118,11 @@
         </div>
         <div class="right">
           <section>
+            {% if messages %}
+{% for message in messages  %}
+<div class="message">{{message}}</div>
+{% endfor %}
+{% endif %}
             <form action="" class="search">
               <button class="search-btn">
                 <i class="fa fa-light fa fa-magnifying-glass"></i>

@@ -115,6 +115,10 @@ class Contention(models.Model):
         default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     parent_contending = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={
                                           'isParent': True}, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=250)
+    last_name = models.CharField(max_length=250)
+    student_id = models.CharField(max_length=10)
+    amount_paid = models.FloatField()
     created_on = models.DateTimeField(auto_now=True)
     reason = models.TextField()
     proof = models.FileField(upload_to="img")
