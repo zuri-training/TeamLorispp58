@@ -14,10 +14,10 @@ class ContactForm(forms.Form):
 class DiscussionForm(forms.ModelForm):
     class Meta:
         model = Discussion
-        fields = '__all__'
+        fields = ["body", "topics"]
 
 
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = ["body"]
