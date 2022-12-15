@@ -30,8 +30,11 @@
                 </h2>
                 <p class="sub-text">Track debtors, Collaborate with school owners, check
                     <span>Credibility and manage debts for school administrators.</p>
-
+                        {% if user.is_authenticated %}
+                        <h3 class="content-btn">Welcome Back, {{request.user |title }}</h3>
+                        {% else %}
                     <a href="{% url 'createAccount' %}" class="content-btn">Register with Us</a>
+                    {% endif %}
                 </p>
             </div>
 
@@ -130,9 +133,9 @@
                         usability are implemented...
                     </p>
 
-                    <button class="content-btn">
-                        Read more about us
-                    </button>
+                    <p><a href="{% url 'aboutUs' %}" class="content-btn">Read more about us</a></p>
+                        
+                    
 
                 </div>
 

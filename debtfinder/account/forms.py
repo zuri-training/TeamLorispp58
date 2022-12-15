@@ -7,16 +7,16 @@ from .models import *
 class CustomUserForm(UserCreationForm):
     class Meta:
         model = CustomUser
-        fields = ["first_name", "last_name", "email", "phone_number","isParent", "isSchool",
-         "password1", "password2"]
+        fields = ["first_name", "last_name", "email", "phone_number", "isParent", "isSchool",
+                  "password1", "password2"]
         widgets = {
-            'first_name': forms.TextInput(attrs={'required':True, 'placeholder': 'First Name'}),
-            'last_name': forms.TextInput(attrs={'required':True, 'placeholder': 'Last Name'}),
-            'email': forms.EmailInput(attrs={'required':True, 'placeholder': 'Email Address'}),
-            
+            'first_name': forms.TextInput(attrs={'required': True, 'placeholder': 'First Name'}),
+            'last_name': forms.TextInput(attrs={'required': True, 'placeholder': 'Last Name'}),
+            'email': forms.EmailInput(attrs={'required': True, 'placeholder': 'Email Address'}),
+
             'phone_number': forms.TextInput(attrs={'required': True, 'placeholder': 'Phone Number'}),
-            'password1': forms.PasswordInput(attrs={'required':True, 'placeholder': 'Password'}),
-            'password2': forms.PasswordInput(attrs={'required':True, 'placeholder': 'Confirm your password'})
+            'password1': forms.PasswordInput(attrs={'required': True, 'placeholder': 'Password'}),
+            'password2': forms.PasswordInput(attrs={'required': True, 'placeholder': 'Confirm your password'})
         }
 
         labels = {
@@ -42,34 +42,27 @@ class SchoolForm(ModelForm):
 
     class Meta:
         model = School
-        fields = ["school_name", "CAC_Reg_number","school_address","school_email",
+        fields = ["school_name", "CAC_Reg_number", "school_address", "school_email",
                   "school_phone_number"]
 
 
 class DebtorForm(ModelForm):
-    
+
     class Meta:
         model = Debtor
-        fields = ["first_name", "last_name", "student_id", "debt_type", "amount_owed", "academic_session"]
+        fields = ["first_name", "last_name",
+                  "student_id", "debt_type", "amount_owed"]
 
     def __init__(self, *args, **kwargs):
         super(DebtorForm, self).__init__(*args, **kwargs)
 
         for name, field in self.fields.items():
-            field.widget.attrs.update({'class': 'input'})
+            field.widget.attrs.update({'class': 'form-input'})
 
 
 class ContentionForm(ModelForm):
-    
+
     class Meta:
         model = Contention
-        fields = ["reason", "proof"]
-
-
-
-def __init__(self, *args, **kwargs):
-    super(DebtorForm, self).__init__(*args, **kwargs)
-
-    for name, field in self.fields.items():
-        field.widget.attrs.update({'class': 'input'})
-
+        fields = ["first_name", "last_name", "student_id",
+                  "amount_paid", "reason", "proof"]

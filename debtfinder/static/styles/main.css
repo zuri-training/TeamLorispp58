@@ -78,8 +78,9 @@ span {
 
 
 .content-btn {
+    display: inline-flex;
     text-decoration: none;
-    margin-top: 2rem;
+    margin-top: 3rem;
     background-color: #210440;
     color: #ffffff;
     font-size: 16px;

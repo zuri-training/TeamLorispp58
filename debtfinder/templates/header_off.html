@@ -30,6 +30,11 @@
     </ul>
 
     {% if request.user.is_authenticated %}
+     <div>
+  {% if request.user.isSchool == True %}
+    <a href="{% url 'addDebtor' %}" id="header-btn-a">Add debtor</a>
+    {% endif %}
+    </div>
     <div>
       <a href="{% url 'logout' %}" id="header-btn-a">Log Out </a>
     </div>

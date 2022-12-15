@@ -74,128 +74,19 @@ def school(request, pk):
     }
     return render(request, "schoolProfilepage.html", context)
 
-
-@login_required(login_url="login")
-def discussions(request):
-    discuss = Discussion.objects.all()
-    context = {
-        "discuss": discuss
-    }
-    return render(request, "", context)
-
-
-@login_required(login_url="login")
-def discussView(request, pk):
-    discussObj = Discussion.objects.get(id=pk)
-    context = {
-        "discuss": discussObj
-    }
-    return render(request, "", context)
-
-# create a new discuss
-
-
-@login_required(login_url="login")
-def createDiscuss(request):
-    form = DiscussionForm()
-
-    if request.method == "POST":
-        form = DiscussionForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("discuss")
-    context = {"form": form}
-    return render(request, "", context)
-
-# update a discuss
-
-
-@login_required(login_url="login")
-def updateDiscuss(request, pk):
-    discussObj = Discussion.objects.get(id=pk)
-    form = DiscussionForm(instance=discussObj)
-
-    if request.method == "POST":
-        form = DiscussionForm(request.POST, instance=discussObj)
-        if form.is_valid():
-            form.save()
-            return redirect("discuss")
-    context = {"form": form}
-    return render(request, "", context)
-
-
-@login_required(login_url="login")
-def deleteDiscuss(request, pk):
-    discussObj = Discussion.objects.get(id=pk)
-    if request.method == "POST":
-        discussObj.delete()
-        return redirect("disccuss")
-    context = {"object": discussObj}
-    return render(request, "delete_temp.html", context)
-
-
-@login_required(login_url="login")
-def createComment(request):
-    form = CommentForm()
-    if request.method == "POST":
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("discuss")
-    context = {
-        "form": form
-    }
-    return render(request, "", context)
-
-
-@login_required(login_url="login")
-def updateComment(request, pk):
-    commentObj = Comment.objects.get(pk=id)
-    form = CommentForm(instance=commentObj)
-    if request.method == "POST":
-        form = CommentForm(request.POST, instance=commentObj)
-        if form.is_valid():
-            form.save()
-            return redirect("discuss")
-    context = {
-        "form": form
-    }
-    return render(request, "", context)
-
-
-@login_required(login_url="login")
-def deleteComment(request, pk):
-    commentObj = Comment.objects.get(id=pk)
-    if request.method == "POST":
-        commentObj.delete()
-        messages.success(request, "Comment deleted successfully")
-        return redirect("discuss")
-    context = {
-        "object": commentObj
-    }
-    return render(request, "delete_temp.html", context)
-
-
 @login_required(login_url="login")
 def database(request):
     search_query = ''
     if request.GET.get('search_query'):
         search_query = request.GET.get('search_query')
     debtors = Debtor.objects.filter(Q(first_name__icontains=search_query), Q(last_name__icontains=search_query))
+    form = Contention.objects.filter(Q(first_name__icontains=search_query), Q(last_name__icontains=search_query))
     context = {
-        "debtors": debtors
+        "debtors": debtors,
+        "form": form
     }
 
     return render(request, "database.html", context)
-
-@login_required(login_url="login")
-def debtorView(request, pk):
-    debtorView = Debtor.objects.get(id=pk)
-    context = {
-        "debtor": debtorView
-    }
-    return render(request, "", context)
-
 
 @login_required(login_url="login")
 def addDebtor(request):
@@ -234,6 +125,17 @@ def deleteDebtor(request, pk):
     }
     return render(request, "delete_temp.html", context)
 
+
+@login_required(login_url="login")
+def debtors(request):
+    debtors = Debtor.objects.all()
+    context = {
+        "debtors":debtors
+    }
+    return render(request, "debtors.html", context)
+
+
+
 @login_required(login_url="login")
 def contention(request):
     form = ContentionForm()
@@ -249,7 +151,7 @@ def contention(request):
     context = {
         "form": form
     }
-    return render(request, "database.html", context)
+    return render(request, "debtors.html", context)
 
 @login_required(login_url="login")
 def setting(request):

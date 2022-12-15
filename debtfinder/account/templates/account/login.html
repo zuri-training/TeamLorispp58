@@ -15,10 +15,11 @@
 
 <form action="" method="POST" class="form">
     {% csrf_token %}
+{% if messages %}
 {% for message in messages  %}
 <div class="message">{{message}}</div>
 {% endfor %}
-
+{% endif %}
 <label for="email">Email 
     <input type="email" name="email" id="email" class="input-control" placeholder="Email address" required>
 </label>
