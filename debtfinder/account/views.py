@@ -114,11 +114,12 @@ def loginView(request):
 def logoutView(request):
     if request.user.is_authenticated:
         logout(request)
-        messages.info(request, "You're not logged out")
+        messages.info(request, "You're now logged out")
         return redirect("login")
     else:
         messages.info(request, "You're not signed in")
-        return redirect("homepage") 
+        redirect("homepage")
+    return
 
 @login_required(login_url='login')
 def profile(request, pk):

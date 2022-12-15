@@ -249,7 +249,7 @@ def contention(request):
     context = {
         "form": form
     }
-    return render(request, "", context)
+    return render(request, "database.html", context)
 
 @login_required(login_url="login")
 def setting(request):
