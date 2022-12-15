@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+
+}
+
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+    background-color: #210440;
+
+
+}
+
+.brand__logo {
+    margin-top: 1.5rem;
+    height: 67px;
+}
+
+#logo {
+
+    height: 41px;
+}
+
+/* navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+}
+
+
+.nav__links li {
+    padding-left: 3rem;
+}
+
+.nav__links a {
+    text-decoration: none;
+
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.nav__links a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    text-underline-offset: 8px;
+
+}
+
+
+/* navigation bar ends */
+
+/* header primary btn */
+
+#header-btn-a {
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #ffffff;
+
+}
+
+
+#header-btn-b {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-left: 9px;
+    background-color: transparent;
+    padding: 6px 10px;
+    color: #ffffff;
+    border-radius: 9px;
+    cursor: pointer;
+    border: #ffffff solid 2px;
+
+}
+
+#header-btn-a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+#header-btn-b:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #210440;
+
+}
