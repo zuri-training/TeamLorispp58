@@ -1,0 +1,1 @@
+web gunicorn debtfinder.wsgi:application --log-file -
