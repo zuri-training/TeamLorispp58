@@ -101,10 +101,10 @@ class Debtor(models.Model):
                                        'isParent': True}, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=250)
     last_name = models.CharField(max_length=250)
-    student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
+    student_id = models.CharField(max_length=10)
     debt_type = models.CharField(max_length=150)
     amount_owed = models.FloatField()
-    academic_session = models.DateField()
+    academic_session = models.DateField(auto_now=True)
 
     def str(self):
         return f"{self.first_name}"

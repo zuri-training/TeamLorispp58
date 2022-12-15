@@ -43,13 +43,13 @@
                 >
               </div>
               <div>
-                <a href="" class="item">
+                <a href="{% url 'Profile' %}" class="item">
                   <img src="{% static 'img/user.svg' %}" alt="" class="icons" />
                   Profile</a
                 >
               </div>
               <div>
-                <a href="" class="item"
+                <a href="{% url 'database' %}" class="item"
                   ><img
                     src="{% static 'img/vector2.svg' %}"
                     alt=""
@@ -59,7 +59,7 @@
                 >
               </div>
               <div>
-                <a href="" class="item"
+                <a href="{% url 'schools' %}" class="item"
                   ><img
                     src="{% static 'img/teacher.svg' %}"
                     alt=""
@@ -68,7 +68,7 @@
                 >
               </div>
               <div>
-                <a href="" class="item">
+                <a href="{% url 'addDebtor' %}" class="item">
                   <img
                     src="{% static 'img/vector3.svg' %}"
                     alt=""
@@ -88,7 +88,7 @@
             </div>
             <div class="item-2">
               <div>
-                <a href="" class="item"
+                <a href="{% url 'setting' %}" class="item"
                   ><img
                     src="{% static 'img/settings.svg' %}"
                     alt=""
@@ -98,7 +98,7 @@
                 >
               </div>
               <div class="item">
-                <a href=""
+                <a href="{% url 'contactUs' %}"
                   ><img
                     src="{% static 'img/circle.svg' %}"
                     alt=""
@@ -108,7 +108,7 @@
                 >
               </div>
               <div class="item">
-                <a href=""
+                <a href="{% url 'logout' %}"
                   ><img src="{% static 'img/logout' %}" alt="" class="icons" />
                   Log Out</a
                 >
@@ -124,41 +124,17 @@
               </button>
               <input type="search" placeholder="search" class="search-input" />
             </form>
-            <h1>Add a new deptor</h1>
-            <form action="">
+            <h1>Add a new debtor</h1>
+            <form action="" method="POST">
+              {% csrf_token %}
+              {% for field in form %}
               <div class="form-control">
-                <label for="full-name">Full Name</label>
-                <input type="text" class="form-input" />
+                <label for="full-name">{{field.label_tag}}</label>
+                <p>{{field}}</p>
               </div>
-              <div class="form-control">
-                <label for="student-id">Student ID</label>
-                <input type="text" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="amount">Amount</label>
-                <input type="text" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="gender">Gender</label>
-                <input type="text" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="parent-guardian">Parent/Guardian</label>
-                <input type="text" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="email">Email</label>
-                <input type="email" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="phone-number">Phone Number</label>
-                <input type="text" class="form-input" />
-              </div>
-              <div class="form-control">
-                <label for="description">Description</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </div>
-              <button class="btn">Add Deptor</button>
+              {% endfor %}
+
+              <button class="btn">Add Debtor</button>
             </form>
           </section>
         </div>

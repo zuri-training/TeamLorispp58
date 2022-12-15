@@ -8,9 +8,6 @@ urlpatterns = [
 
     path("register", registerView, name="register"),
     path("school_register", schoolRegView, name="schoolRegView"),
-    path("school" , schoolProfile, name="schoolProfile"),
+    path("school/", profile, name="Profile"),
 
-    # database for debtors
-    path("database/", database, name="database"),
-    path("debtor_about/<str:pk>", debtorView, name="debtorView")
 ]

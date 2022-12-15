@@ -186,7 +186,7 @@ def database(request):
         "debtors": debtors
     }
 
-    return render(request, "", context)
+    return render(request, "database.html", context)
 
 @login_required(login_url="login")
 def debtorView(request, pk):
@@ -205,7 +205,9 @@ def addDebtor(request):
     elif request.user.isSchool == True:
         if request.method == "POST":
             if form.is_valid():
-                form.save()
+                debtor = form.save(commit=False)
+                debtor.posted_by = School.objects.get(school=request.user)
+                debtor.save()
                 messages.success(request, "You've succefully added a debtor")
                 return render("debtor")
         else:
@@ -213,7 +215,7 @@ def addDebtor(request):
     context = {
         "form": form
     }
-    return render(request, "", context)
+    return render(request, "Dashboard.html", context)
 
 
 @login_required(login_url="login")
