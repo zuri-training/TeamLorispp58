@@ -10,12 +10,12 @@
 <section>
 <div class="form-wrapper">
 <h3>LOGOUT</h3>
-
-<form action="" method="POST" class="form">
-    {% csrf_token %}
 {% for message in messages  %}
 <div class="message">{{message}}</div>
 {% endfor %}
+<form action="" method="POST" class="form">
+    {% csrf_token %}
+
 
     
     <input type="submit" value="Log out" class="btn">

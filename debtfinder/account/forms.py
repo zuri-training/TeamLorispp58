@@ -50,12 +50,26 @@ class DebtorForm(ModelForm):
     
     class Meta:
         model = Debtor
-        fields = '__all__'
+        fields = ["first_name", "last_name", "student_id", "debt_type", "amount_owed", "academic_session"]
+
+    def __init__(self, *args, **kwargs):
+        super(DebtorForm, self).__init__(*args, **kwargs)
+
+        for name, field in self.fields.items():
+            field.widget.attrs.update({'class': 'input'})
 
 
 class ContentionForm(ModelForm):
     
     class Meta:
         model = Contention
-        fields = '__all__'
+        fields = ["reason", "proof"]
+
+
+
+def __init__(self, *args, **kwargs):
+    super(DebtorForm, self).__init__(*args, **kwargs)
+
+    for name, field in self.fields.items():
+        field.widget.attrs.update({'class': 'input'})
 

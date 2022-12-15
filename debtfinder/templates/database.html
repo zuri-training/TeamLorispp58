@@ -79,10 +79,10 @@
             <div class="search-container">
 
 
-                <form action="/action_page.php">
+                <form action="">
                     <label>
 
-                        <input type="text" placeholder="Search" name="search">
+                        <input type="text" placeholder="Search" name="search_query">
 
                     </label>
 
@@ -136,19 +136,20 @@
         </div>
 
         
-
-
+{% if debtors %}
+ 
         <div class="divcontainer">
+            {% for debtor in debtors %}
             <div class="div-link">
-                <a href="">John Peace</a>
+                <a href="">{{debtor.first_name}} {{debtor.last_name}}</a>
             </div>
 
             <div class="div-link">
-                <a href="">#54,800</a>
+                <a href="">{{debtor.amount_owed}}</a>
             </div>
 
             <div class="div-link">
-                <a href="">30/11/2022</a>
+                <a href="">{{debtor.academic_session}}</a>
             </div>
 
             <div class="div-link">
@@ -158,104 +159,16 @@
             <div class="div-link">
                 <a href="">View Details</a>
             </div>
-
+{% endfor %}
         </div>
+        
+{% endif %}
 
 
         <div class="file">
             <button class="btn-file" ><i class="fa fa-folder"></i></button>
         </div>
 
-
-        <div class="divcontainer">
-            <div class="div-link">
-                <a href="">Ogor Akin</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">#33,000</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">30/11/2022</a>
-            </div>
-
-            <div class="div-link">
-                <a href="" class="failed">Failed</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">View Details</a>
-            </div>
-
-        </div>
-
-        <div class="file">
-            <button class="btn-file"><i class="fa fa-folder"></i></button>
-        </div>
-
-        <div class="divcontainer">
-            <div class="div-link">
-                <a href="">Ogor Akin</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">#33,000</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">30/11/2022</a>
-            </div>
-
-            <div class="div-link">
-                <a href="" class="failed">Failed</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">View Details</a>
-            </div>
-
-
-
-        </div>
-        <div class="file">
-            <button class="btn-file"><i class="fa fa-folder"></i></button>
-        </div>
-
-
-        
-
-      
-
-
-        <div class="divcontainer">
-            <div class="div-link">
-                <a href="">John Peace</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">#58,800</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">30/11/2022</a>
-            </div>
-
-            <div class="div-link">
-                <a href="" class="successful">Successful</a>
-            </div>
-
-            <div class="div-link">
-                <a href="">View Details</a>
-            </div>
-
-        </div>
-
-
-
-        <div class="view-all">
-            <button type="submit" class="viewall">View all</button>
-        </div>
 
         
 
