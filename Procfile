@@ -1,1 +1,1 @@
-web gunicorn debtfinder.wsgi:application --log-file -
+web: gunicorn --pythonpath debtfinder debtfinder.wsgi
