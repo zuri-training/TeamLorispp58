@@ -94,8 +94,6 @@ class Student(models.Model):
 
 
 class Debtor(models.Model):
-    id = models.UUIDField(
-        default=uuid.uuid4, editable=False, unique=True, primary_key=True)
     posted_by = models.ForeignKey(School, on_delete=models.CASCADE)
     parent_details = models.ForeignKey(settings.AUTH_USER_MODEL, limit_choices_to={
                                        'isParent': True}, on_delete=models.CASCADE)
